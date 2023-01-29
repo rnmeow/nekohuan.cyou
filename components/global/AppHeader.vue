@@ -51,6 +51,7 @@
               <NuxtLink
                 :to="i.href"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                @click="drawerOpen = false"
               >{{ i.text }}</NuxtLink>
             </li>
           </ul>
