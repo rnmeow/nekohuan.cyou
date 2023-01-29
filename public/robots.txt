@@ -1,0 +1,26 @@
+# Host
+
+Host: https://nekohuan.cyou
+
+# Allow
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: FacebookBot
+User-agent: Twitterbot
+Allow: /
+
+# Delay
+
+User-agent: wget
+User-agent: curl
+User-agent: fast
+Crawl-delay: 120
+Allow: /
+
+# Others
+
+User-agent: *
+Disallow: /

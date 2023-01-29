@@ -1,0 +1,54 @@
+<template>
+  <section class="relative mx-auto max-w-5xl min-h-screen px-8 py-24 dark:text-neutral-300">
+    <Head>
+      <Title>友人帳 | kuohuanhuan</Title>
+    </Head>
+    <h1 class="font-bold text-neutral-800 dark:text-neutral-200">友情連結</h1>
+    <p class="leading-8">
+      在網路世界走跳，結交的一群朋友 😀
+      <br/>
+      想掛連結？請到 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="decoration-2 hover:underline">GitHub 儲存庫</NuxtLink> 提交 <NuxtLink to="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests" target="_blank" class="decoration-2 hover:underline">Merge Request</NuxtLink> 😉（編輯 <code>`links.json`</code> 檔案）
+    </p>
+    <hr class="my-8"/>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div
+        v-for="link in links"
+        :key="link"
+        class="
+          shadow rounded-xl p-4 m-2
+          transition duration-100 ease-in-out hover:text-neutral-800 hover:scale-[102.5%] hover:shadow-lg
+          dark:shadow-neutral-700 dark:hover:shadow-md dark:hover:shadow-neutral-700
+        "
+      >
+        <NuxtLink :to="link.link" target="_blank" class="block">
+          <div class="flex items-center">
+            <img
+              :src="link.avatar"
+              class="w-16 h-16 rounded-full"
+              alt="avatar"
+            />
+            <div class="ml-4 leading-6">
+              <h2 class="font-bold text-neutral-700 dark:text-neutral-300">{{ link.name }}</h2>
+              <p class="text-neutral-600 dark:text-neutral-400">{{ link.descr }}</p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang="ts" setup>
+import { LINKS_JSON_URL } from '@/config/links'
+const links: any = await useFetch<any>(() => LINKS_JSON_URL)
+</script>
+
+<script lang="ts">
+export default {
+  methods: {
+    returnPostTime (datetime: string, devide: number) {
+      return Math.floor((new Date().getTime() - new Date(datetime).getTime()) / (devide * 60000))
+    }
+  }
+}
+</script>
