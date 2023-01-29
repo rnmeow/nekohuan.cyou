@@ -41,5 +41,9 @@ export default {
       'Open+Sans': true,
       'Courier+Prime': true
     }
+  },
+  sourcemap: {
+    server: false,
+    client: false,
   }
 }
