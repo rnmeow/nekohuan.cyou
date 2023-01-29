@@ -15,10 +15,10 @@
         </p>
         <p v-else class="mt-1 sm:mt-0">
           由
-          <NuxtLink to="https://pages.cloudflare.com" target="_blank">
+          <NuxtLink to="https://developers.cloudflare.com/workers" target="_blank">
             <img
               class="inline hover:rotate-6"
-              src="https://img.shields.io/badge/Cloudflare_Pages-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
+              src="https://img.shields.io/badge/Cloudflare_Workers-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
               type="image/svg"
             />
           </NuxtLink>
