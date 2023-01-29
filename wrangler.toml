@@ -1,0 +1,8 @@
+name = "playground"
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2023-01-29"
+account_id = "4a0a579ae9957b084078dc063fc2731d"
+route = "nekohuan.cyou/*"
+[site]
+bucket = ".output/public"

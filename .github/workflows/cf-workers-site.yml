@@ -1,0 +1,43 @@
+name: Cloudflare Workers Site
+
+on:
+  # Run GH Actions if push to `master` branch
+  push:
+    branches:
+      - master # ps. change to `main` if ur default branch follow's GitHub
+
+jobs:
+  deploy-to-cloudflare:
+    # Use Ubuntu Linux 22.04
+    runs-on: ubuntu-22.04 # ps. change to `ubuntu-latest` if coz any problem(s)
+    steps:
+      # Get src
+      - name: Get source file
+        uses: actions/checkout@v3
+      # Use Node.js Version 17.x
+      - name: Use Node.js 17
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17 # same as the Node.js version of Cloudflare Workers
+      # Cache node_modules folder
+      - name: Enable cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('/yarn.lock') }}
+      # Install deps via Yarn
+      - name: Install deps
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
+      # Build using Nuxt
+      - name: Build from code
+        run: yarn build
+        env:
+          NITRO_PRESET: cloudflare
+      # Deploy to Cloudflare Workers
+      - name: Publish to Cloudflare
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+
+# GitHub Actions config for deployin' Nuxt 3 project, authored by KuoHuanHuan.
