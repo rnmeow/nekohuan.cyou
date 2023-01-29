@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 import { LINKS_JSON_URL } from '@/config/links'
-const links: any = await useFetch<any>(() => LINKS_JSON_URL)
+const { data: links } = await useFetch<any>(() => LINKS_JSON_URL)
 </script>
 
 <script lang="ts">

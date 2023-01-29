@@ -52,4 +52,4 @@ export const API_DOMAIN: string = 'home-backend-production.up.railway.app'
 
 export const RSS_FEED_URL: string = 'https://blog-rss-production.up.railway.app/atom.xml'
 
-export const LINKS_JSON_URL: string = 'https://raw.githubusercontent.com/kuohuanhuan/blog/master/links.json'
+export const LINKS_JSON_URL: string = 'https://cdn.jsdelivr.net/gh/kuohuanhuan/blog@master/links.json'
