@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
       # Install deps via Yarn
       - name: Install deps
         if: steps.cache.outputs.cache-hit != 'true'

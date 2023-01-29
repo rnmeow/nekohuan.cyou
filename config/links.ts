@@ -1,20 +1,17 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-export const HEADER_LINKS: { key: number, icon: string, href: string, text: string }[] = [
+export const HEADER_LINKS: { key: number, href: string, text: string }[] = [
   {
     key: 0,
-    icon: 'pen-nib',
     href: '/blog',
     text: '網誌'
   },
   {
     key: 1,
-    icon: 'comments',
     href: '/guestbook',
     text: '留言板'
   },
   {
     key: 2,
-    icon: 'address-card',
     href: '/friends',
     text: '友情連結'
   }

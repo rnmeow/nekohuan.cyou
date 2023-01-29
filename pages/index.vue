@@ -39,7 +39,7 @@
         </NuxtLink>
         <ClientOnly>
           <NuxtLink
-            :to="email(MAIL_ADDRESS, true)" target="_blank"
+            :to="`mailto:${MAIL_ADDRESS}`" target="_blank"
             class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-neutral-100"
           >
             <FAIcon category="fas" icon="envelope" size="lg"/>
@@ -55,5 +55,4 @@ import VueWriter from 'vue-writer'
 import { SOCIAL_LINKS } from '@/config/links'
 import { MAIL_ADDRESS } from '@/config/personal-data'
 import { status } from '@/utils/status'
-import { email } from '@/utils/email'
 </script>
