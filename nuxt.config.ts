@@ -16,7 +16,6 @@ export default {
         { name: 'google', content: 'notranslate' }
       ],
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://unpkg.com' },
         { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
@@ -37,11 +36,14 @@ export default {
     '@fortawesome/fontawesome/styles.css'
   ],
   googleFonts: {
+    preconnect: true,
+    preload: true,
     families: {
-      'DM+Mono': true,
-      'Open+Sans': true,
+      'DM+Mono': [400, 500],
+      'Open+Sans': [400, 600, 700],
       'Courier+Prime': true
-    }
+    },
+    download: false
   },
   sourcemap: {
     server: false,
