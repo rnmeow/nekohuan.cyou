@@ -7,9 +7,9 @@
       <div class="flex flex-col-reverse md:flex-row md:justify-between">
         <div class="space-y-4">
           <img
-            src="/avatar.webp"
+            src="/avatar.avif"
             class="h-20 w-20 mb-8 rounded-full md:h-28 md:w-28 md:transform-none"
-            type="image/webp" alt="Avatar" priority
+            type="image/avif" alt="Avatar" priority
             width="128" height="128"
           />
           <h1 class="text-3xl font-bold md:text-4xl">郭桓桓 (@kuohuanhuan)</h1>
