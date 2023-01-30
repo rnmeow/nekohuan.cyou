@@ -7,6 +7,7 @@
         v-if="$route.path === '/'"
         onclick="location.reload()"
         class="text-lg hover:translate-y-[-.25rem]"
+        aria-label="Reloads page"
       >$ whoami</button>
       <NuxtLink
         v-else-if="$route.path === '/blog' || $route.path.includes('/post')"
@@ -34,6 +35,7 @@
       <div class="flex items-center gap-1 md:hidden">
         <button
           class="flex h-9 w-9 items-center justify-center rounded-md"
+          aria-label="Open drawer"
           @click="drawerOpen = !drawerOpen ? true : false"
         >
           <FAIcon category="fas" icon="bars"/>
@@ -51,7 +53,7 @@
               <NuxtLink
                 :to="i.href"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                @click="drawerOpen = false"
+                @click="drawerOpen = false" @keydown.enter="drawerOpen = false"
               >{{ i.text }}</NuxtLink>
             </li>
           </ul>
@@ -59,7 +61,7 @@
         <NuxtLink
           :to="RSS_FEED_URL"
           class="flex h-9 w-9 items-center justify-center rounded-md"
-          target="_blank"
+          target="_blank" aria-label="RSS Feed"
         >
           <FAIcon category="fas" icon="rss"/>
         </NuxtLink>

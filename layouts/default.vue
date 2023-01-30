@@ -1,12 +1,9 @@
-<template comments>
+<template>
   <div class="bg-[#fcfcfc] font-mono dark:bg-[#1b1c1e]">
     <AppHeader/>
     <slot/>
     <AppFooter/>
   </div>
-  <!--[if IE]>
-    <script type="text/javascript">window.location.href = 'https://browsehappy.com'</script>
-  <![endif]-->
 </template>
 
 <style type="text/css">

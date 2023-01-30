@@ -1,5 +1,6 @@
 export default {
   modules: [
+    '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts' // Prerelease 3.0.0-1 (https://npm.im/@nuxtjs/google-fonts)
   ],

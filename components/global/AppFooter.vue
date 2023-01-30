@@ -7,7 +7,7 @@
         </p>
         <p v-if="$route.path === '/blog' || $route.path.includes('/post')" class="mt-1 sm:mt-0">
           <NuxtLink to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-            <img
+            <NuxtImg
               src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
               class="hover:rotate-6" type="image/png" alt="CC BY-NC-SA 4.0"
             />
@@ -15,19 +15,23 @@
         </p>
         <p v-else class="mt-1 sm:mt-0">
           由
-          <NuxtLink to="https://developers.cloudflare.com/workers" target="_blank">
-            <img
+          <NuxtLink
+            to="https://developers.cloudflare.com/workers"
+            target="_blank"
+            aria-label="Link to Cloudflare Workers Docs"
+          >
+            <NuxtImg
               class="inline hover:rotate-6"
               src="https://img.shields.io/badge/Cloudflare_Workers-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              type="image/svg"
+              type="image/svg" alt="Cloudflare Workers badge"
             />
           </NuxtLink>
           和
-          <NuxtLink to="https://railway.app" target="_blank">
-            <img
+          <NuxtLink to="https://railway.app" target="_blank" aria-label="Link to Railway">
+            <NuxtImg
               class="inline hover:rotate-6"
               src="https://img.shields.io/badge/Railway-853bce?style=flat-square&logo=railway&logoColor=white"
-              type="image/svg"
+              type="image/svg" alt="Railway badge"
             />
           </NuxtLink>
           驅動

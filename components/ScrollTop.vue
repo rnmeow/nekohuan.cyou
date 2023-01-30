@@ -7,6 +7,7 @@
       dark:bg-neutral-800/90 dark:text-neutral-300 dark:hover:shadow-none dark:hover:scale-110
     "
     onclick="window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })"
+    aria-label="Scroll to top"
   >
     <FAIcon category="fas" icon="angle-up" size="lg"/>
   </button>

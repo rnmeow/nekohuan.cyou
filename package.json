@@ -16,6 +16,7 @@
   },
   "packageManager": "yarn@3.3.1",
   "devDependencies": {
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.30.0",

@@ -6,7 +6,7 @@
     <div class="max-w-5xl mx-8 space-y-6">
       <div class="flex flex-col-reverse md:flex-row md:justify-between">
         <div class="space-y-4">
-          <img
+          <NuxtImg
             src="/avatar.webp"
             class="h-20 w-20 mb-8 rounded-full md:h-28 md:w-28 md:transform-none"
             type="image/webp" alt="Avatar" priority
@@ -34,6 +34,7 @@
           :to="i.href"
           target="_blank"
           class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-white"
+          :aria-label="`Social link to ${i.icon}`"
         >
           <FAIcon category="fab" :icon="i.icon" size="lg"/>
         </NuxtLink>
@@ -41,6 +42,7 @@
           <NuxtLink
             :to="`mailto:${MAIL_ADDRESS}`" target="_blank"
             class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-neutral-100"
+            aria-label="Send Email"
           >
             <FAIcon category="fas" icon="envelope" size="lg"/>
           </NuxtLink>

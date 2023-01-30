@@ -39,22 +39,24 @@
       <button
         v-if="currentPage > 1"
         class="transition duration-200 ease-in-out hover:translate-x-[-.25rem]" 
+        aria-label="Go to previous page"
         @click="currentPage--"
       >
         <FAIcon category="fas" icon="angle-left" size="sm"/>
       </button>
-      <button v-else class="text-neutral-300 dark:text-neutral-600" disabled>
+      <button v-else class="text-neutral-300 dark:text-neutral-600" aria-label="This button is disabled" disabled>
         <FAIcon category="fas" icon="angle-left" size="sm"/>
       </button>
       <p>{{ currentPage }} / {{ Math.ceil(posts.length / pageSize) }}</p>
       <button
         v-if="currentPage < Math.ceil(posts.length / pageSize)"
         class="transition duration-200 ease-in-out hover:translate-x-1"
+        aria-label="Go to next page"
         @click="currentPage++" 
       >
         <FAIcon category="fas" icon="angle-right" size="sm"/>
       </button>
-      <button v-else class="text-neutral-300 dark:text-neutral-600" disabled>
+      <button v-else class="text-neutral-300 dark:text-neutral-600" aria-label="This button is disabled" disabled>
         <FAIcon category="fas" icon="angle-right" size="sm"/>
       </button>
     </div>
