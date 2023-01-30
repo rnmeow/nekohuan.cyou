@@ -16,7 +16,7 @@
             <ClientOnly placeholder="Loading...">
               <VueWriter
                 :array="status" :erase-speed="75" :type-speed="100"
-                class="after:content-['#'] after:font-mono after:animate-ping"
+                class="after:content-['▊'] after:font-mono after:animate-ping"
               />
             </ClientOnly>
           </h2>
