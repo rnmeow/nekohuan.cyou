@@ -27,7 +27,7 @@
         <NuxtLink
           :to="RSS_FEED_URL"
           class="flex h-9 w-9 items-center justify-center rounded-md"
-          target="_blank"
+          target="_blank" aria-label="RSS Feed"
         >
           <FAIcon category="fas" icon="rss" tailwind="duration-200 ease-in-out hover:rotate-180"/>
         </NuxtLink>
