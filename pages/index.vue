@@ -14,12 +14,10 @@
           />
           <h1 class="text-3xl font-bold md:text-4xl">郭桓桓 (@kuohuanhuan)</h1>
           <h2 class="font-semibold font-courier">
-            <ClientOnly placeholder="Loading...">
-              <VueWriter
-                :array="status" :erase-speed="75" :type-speed="100"
-                class="after:content-['▊'] after:font-mono after:animate-ping"
-              />
-            </ClientOnly>
+            <VueWriter
+              :array="status" :erase-speed="75" :type-speed="100"
+              class="after:content-['▊'] after:font-mono after:animate-ping"
+            />
           </h2>
           <p class="text-lg">
             一個來自臺灣 🇹🇼 的前端 Coder 👨🏻‍💻、Podcast 愛好者 📻、部落客 ✍️ 和學生 👨‍🎓。
@@ -39,15 +37,13 @@
         >
           <FAIcon category="fab" :icon="i.icon" size="lg"/>
         </NuxtLink>
-        <ClientOnly>
-          <NuxtLink
-            :to="`mailto:${MAIL_ADDRESS}`" target="_blank"
-            class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-neutral-100"
-            aria-label="Send Email"
-          >
-            <FAIcon category="fas" icon="envelope" size="lg"/>
-          </NuxtLink>
-        </ClientOnly>
+        <NuxtLink
+          :to="`mailto:${MAIL_ADDRESS}`" target="_blank"
+          class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-neutral-100"
+          aria-label="Send Email"
+        >
+          <FAIcon category="fas" icon="envelope" size="lg"/>
+        </NuxtLink>
       </div>
     </div>
   </section>
