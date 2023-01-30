@@ -11,8 +11,10 @@
     </p>
     <hr class="my-8"/>
     <div class="grid grid-cols-1 md:grid-cols-2">
+      <p v-if="pending">載入中，請耐心等待……</p>
       <div
         v-for="link in links"
+        v-else
         :key="link"
         class="
           shadow rounded-xl p-4 m-2
@@ -40,7 +42,7 @@
 
 <script lang="ts" setup>
 import { LINKS_JSON_URL } from '@/config/links'
-const { data: links } = await useFetch<any>(() => LINKS_JSON_URL)
+const { pending, data: links } = useLazyFetch<any>(() => LINKS_JSON_URL, { server: false })
 </script>
 
 <script lang="ts">
