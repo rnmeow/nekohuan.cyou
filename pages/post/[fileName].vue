@@ -14,10 +14,12 @@
         <div class="divide-y divide-gray-200 transition-colors dark:divide-neutral-700">
           <div class="pb-8 transition-colors lg:grid lg:grid-cols-4 lg:gap-x-6">
             <div class="divide-y divide-gray-200 pb-8 transition-colors dark:divide-neutral-700 lg:col-span-3">
+              <p v-if="pending">Loading...</p>
               <!-- eslint-disable vue/no-v-html -->
               <div
+                v-else
                 id="content" class="my-6 prose prose-neutral dark:prose-invert"
-                v-html=" Pangu.spacing(mdParser.render(post.Content))"
+                v-html="Pangu.spacing(mdParser.render(post.Content))"
               ></div>
             </div>
             <aside>
@@ -51,7 +53,7 @@ import Pangu from 'pangu'
 import { API_DOMAIN } from '@/config/links'
 
 const { fileName } = useRoute().params
-const { data: post }  = await useFetch<any>(() => `https://${API_DOMAIN}/post/${fileName}`)
+const { pending, data: post } = await useFetch<any>(() => `https://${API_DOMAIN}/post/${fileName}`)
 const mdParser = new MarkdownIt({
   html: true,
   xhtmlOut: true,
