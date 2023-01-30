@@ -18,7 +18,7 @@ jobs:
       - name: Use Node.js 17
         uses: actions/setup-node@v3
         with:
-          node-version: 17 # same as the Node.js version of Cloudflare Workers
+          node-version-file: .nvmrc # use .nvmrc file to specify Node.js version
       # Cache node_modules folder
       - name: Enable cache
         uses: actions/cache@v3
