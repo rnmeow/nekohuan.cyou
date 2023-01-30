@@ -7,7 +7,7 @@
     <p class="leading-8">
       在網路世界走跳，結交的一群朋友 😀
       <br/>
-      想掛連結？請到 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="decoration-2 hover:underline">GitHub 儲存庫</NuxtLink> 提交 <NuxtLink to="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests" target="_blank" class="decoration-2 hover:underline">Merge Request</NuxtLink> 😉（編輯 <code>`links.json`</code> 檔案）
+      想掛連結？請瀏覽 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="decoration-2 hover:underline">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
     </p>
     <hr class="my-8"/>
     <div class="grid grid-cols-1 md:grid-cols-2">

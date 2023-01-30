@@ -7,7 +7,7 @@
       <div class="flex flex-col-reverse md:flex-row md:justify-between">
         <div class="space-y-4">
           <img
-            src="@/assets/profile@2x.webp"
+            src="/avatar.webp"
             class="h-20 w-20 mb-8 rounded-full md:h-28 md:w-28 md:transform-none"
             type="image/webp" alt="Avatar" priority
           />
