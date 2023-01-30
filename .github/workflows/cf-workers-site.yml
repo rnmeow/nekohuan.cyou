@@ -31,7 +31,7 @@ jobs:
         run: yarn
       # Build using Nuxt
       - name: Build from code
-        run: yarn build
+        run: yarn eslint && yarn build
         env:
           NITRO_PRESET: cloudflare
       # Deploy to Cloudflare Workers
