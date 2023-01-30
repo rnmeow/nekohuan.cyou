@@ -22,8 +22,8 @@ export default {
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
       ],
       script: [
-        { src: '//unpkg.com/twikoo@1.6.8/dist/twikoo.all.min.js', type: 'text/javascript' },
-        // { src: '//cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js', type: 'text/javascript' }, -> 在中國速度較快
+        { src: '//unpkg.com/twikoo@1.6.8/dist/twikoo.all.min.js', type: 'text/javascript', defer: true },
+        /* '//cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js' 在中國速度較快 */
         // { src: '//unpkg.com/jquery@3.6.3/dist/jquery.min.js', type: 'text/javascript' } -> 不用 jQuery :)
       ]
     }
