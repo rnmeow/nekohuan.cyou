@@ -1,6 +1,5 @@
 export default {
   modules: [
-    '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts' // Prerelease 3.0.0-1 (https://npm.im/@nuxtjs/google-fonts)
   ],
@@ -18,6 +17,7 @@ export default {
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://unpkg.com' },
         { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
@@ -45,6 +45,6 @@ export default {
   },
   sourcemap: {
     server: false,
-    client: false,
+    client: false
   }
 }

@@ -6,10 +6,11 @@
     <div class="max-w-5xl mx-8 space-y-6">
       <div class="flex flex-col-reverse md:flex-row md:justify-between">
         <div class="space-y-4">
-          <NuxtImg
+          <img
             src="/avatar.webp"
             class="h-20 w-20 mb-8 rounded-full md:h-28 md:w-28 md:transform-none"
             type="image/webp" alt="Avatar" priority
+            width="128" height="128"
           />
           <h1 class="text-3xl font-bold md:text-4xl">郭桓桓 (@kuohuanhuan)</h1>
           <h2 class="font-semibold font-courier">

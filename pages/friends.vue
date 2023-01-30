@@ -24,7 +24,7 @@
       >
         <NuxtLink :to="link.link" target="_blank" class="block">
           <div class="flex items-center">
-            <NuxtImg
+            <img
               :src="link.avatar"
               class="w-16 h-16 rounded-full"
               alt="avatar"
