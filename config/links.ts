@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-inferrable-types */
 export const HEADER_LINKS: { key: number, href: string, text: string }[] = [
   {
     key: 0,
@@ -45,8 +44,6 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   }
 ]
 
-export const API_DOMAIN: string = 'home-backend-production.up.railway.app'
+export const API_DOMAIN = 'home-backend-production.up.railway.app'
 
-export const RSS_FEED_URL: string = 'https://blog-rss-production.up.railway.app/atom.xml'
-
-export const LINKS_JSON_URL: string = 'https://cdn.jsdelivr.net/gh/kuohuanhuan/blog@master/links.json'
+export const RSS_FEED_URL = 'https://blog-rss-production.up.railway.app/atom.xml'

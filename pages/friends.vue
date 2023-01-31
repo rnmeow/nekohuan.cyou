@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-import { LINKS_JSON_URL } from '@/config/links'
+import { LINKS_JSON_URL } from '@/config/links-json'
 const { pending, data: links } = useLazyFetch<any>(() => LINKS_JSON_URL, { server: false })
 </script>
 
