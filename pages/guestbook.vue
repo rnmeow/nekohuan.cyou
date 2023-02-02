@@ -8,18 +8,20 @@
       嗨 👋，感謝你到訪我的網站 😀——這裡是留言板，歡迎留言 😉
     </p>
     <hr class="my-8"/>
-    <div id="comment"></div>
+    <Giscus
+      repo="kuohuanhuan/blog"
+      repo-id="R_kgDOI3I4HA"
+      category="Comments"
+      category-id="DIC_kwDOI3I4HM4CT7PF"
+      mapping="pathname"
+      strict="0"
+      reactions-enabled="1"
+      emit-metadata="0"
+      input-position="top"
+      theme="preferred_color_scheme"
+      lang="zh-TW"
+      host="https://giscus.app"
+      loading="lazy"
+    />
   </section>
 </template>
-
-<script lang="ts">
-export default {
-  mounted() {
-    twikoo.init({
-      envId: 'https://home-twikoo-fawn.vercel.app',
-      el: '#comment',
-      lang: 'zh-TW'
-    })
-  }
-}
-</script>
