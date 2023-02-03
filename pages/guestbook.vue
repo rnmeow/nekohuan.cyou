@@ -8,7 +8,7 @@
       嗨 👋，感謝你到訪我的網站 😀——這裡是留言板，歡迎留言 😉
     </p>
     <hr class="my-8"/>
-    <Giscus
+    <giscus
       repo="kuohuanhuan/blog"
       repo-id="R_kgDOI3I4HA"
       category="Comments"

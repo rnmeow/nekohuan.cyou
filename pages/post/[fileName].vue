@@ -35,7 +35,7 @@
     <hr/>
     <div class="dark:text-neutral-300">
       <h2 class="my-6 text-2xl font-bold">留言</h2>
-      <Giscus
+      <giscus
         repo="kuohuanhuan/blog"
         repo-id="R_kgDOI3I4HA"
         category="Comments"
