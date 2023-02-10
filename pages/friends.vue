@@ -11,7 +11,7 @@
     </p>
     <hr class="my-8"/>
     <div class="grid grid-cols-1 md:grid-cols-2">
-      <p v-if="pending">載入中，請耐心等待……</p>
+      <p v-if="pending">載入中……</p>
       <div
         v-for="link in links"
         v-else

@@ -26,6 +26,9 @@ export default {
       // ]
     }
   },
+  runtimeConfig: {
+    GH_PAT: process.env.GH_PAT
+  },
   typescript: {
     typeCheck: true
   },

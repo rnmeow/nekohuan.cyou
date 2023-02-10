@@ -1,30 +1,35 @@
 <template>
   <article class="relative mx-auto max-w-5xl px-8 py-24 leading-8 font-sans">
     <Head>
-      <Title v-if="pending">載入中…… | khh.log</Title>
-      <Title v-else>{{ `${post.Title} | khh.log` }}</Title>
+      <Title>{{ `${data.title} | khh.log` }}</Title>
     </Head>
-    <h1 v-if="!pending" class="font-bold dark:text-neutral-200" v-text="post.Title"></h1>
-    <div v-if="!pending" class="flex text-sm font-courier dark:text-neutral-300">
-      <p><FAIcon category="far" icon="calendar" size="md"/> {{ post.DateTime }}</p>
-      &nbsp;/&nbsp;
-      <p><FAIcon category="fas" icon="eye" size="sm"/> {{ post.Views.toString() }}</p>
+    <h1 class="font-bold dark:text-neutral-200">{{ data.title }}</h1>
+    <div class="flex text-sm font-courier dark:text-neutral-300">
+      <p>
+        <FAIcon category="fas" icon="clock-rotate-left" size="sm"/>
+        發布於 {{
+          returnPostTime(data.datetime, 52560000) >= 1 ? returnPostTime(data.datetime, 52560000) + ' 世紀前' :
+          returnPostTime(data.datetime, 525600) >= 1 ? returnPostTime(data.datetime, 525600) + ' 年前' :
+          returnPostTime(data.datetime, 43200) >= 1 ? returnPostTime(data.datetime, 43200) + ' 個月前' :
+          returnPostTime(data.datetime, 1440) >= 1 ? returnPostTime(data.datetime, 1440) + ' 天前' :
+          returnPostTime(data.datetime, 60) >= 1 ? returnPostTime(data.datetime, 60) + ' 小時前' :
+          returnPostTime(data.datetime, 1) >= 1 ? returnPostTime(data.datetime, 1) + ' 分鐘前': '剛剛'
+        }}
+      </p>
     </div>
     <section class="my-6">
       <div class="flex gap-4 my-6 dark:text-neutral-300">
         <div class="divide-y divide-gray-200 transition-colors dark:divide-neutral-700">
           <div class="pb-8 transition-colors lg:grid lg:grid-cols-4 lg:gap-x-6">
-            <div class="divide-y divide-gray-200 pb-8 transition-colors dark:divide-neutral-700 lg:col-span-3">
-              <p v-if="pending">載入中，請耐心等待……</p>
+            <div class="divide-y divide-gray-200 pb-8 transition-colors dark:divide-neutral-700 md:col-span-3">
               <!-- eslint-disable vue/no-v-html -->
               <div
-                v-else
                 id="content" class="my-6 prose prose-neutral dark:prose-invert"
-                v-html="Pangu.spacing(mdParser.render(post.Content))"
+                v-html="Pangu.spacing(mdParser.render(data.content))"
               ></div>
             </div>
             <aside>
-              <div v-if="!pending" class="hidden md:flex md:sticky md:top-24 md:col-span-1">
+              <div class="hidden md:flex md:sticky md:top-24 md:col-span-1">
                 <ToC element="#content"/>
               </div>
             </aside>
@@ -65,10 +70,8 @@ import 'highlight.js/styles/vs2015.css'
 
 import Pangu from 'pangu'
 
-import { API_DOMAIN } from '@/config/links'
-
-const { fileName } = useRoute().params
-const { pending, data: post } = useLazyFetch<any>(() => `https://${API_DOMAIN}/post/${fileName}`, { server: false })
+const { slug } = useRoute().params
+const { data }: any = await useAsyncData(() => $fetch(`/api/post/${slug}`))
 const mdParser = new MarkdownIt({
   html: true,
   xhtmlOut: true,
@@ -79,6 +82,16 @@ const mdParser = new MarkdownIt({
     }
   }
 }).use(Emoji).use(Anchor, { slugify: (s: string) => Uslug(s) }).use(Lazyload, { decoding: true })
+</script>
+
+<script lang="ts">
+export default {
+  methods: {
+    returnPostTime (datetime: string, devide: number) {
+      return Math.floor((new Date().getTime() - new Date(datetime).getTime()) / (devide * 60000))
+    }
+  }
+}
 </script>
 
 <style type="text/css" scoped>

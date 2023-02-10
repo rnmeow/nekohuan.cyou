@@ -44,6 +44,6 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   }
 ]
 
-export const API_DOMAIN = 'home-backend-production.up.railway.app'
+export const GH_API_URL = 'https://api.github.com/repos/kuohuanhuan/blog'
 
 export const RSS_FEED_URL = 'https://blog-rss-production.up.railway.app/atom.xml'

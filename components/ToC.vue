@@ -1,49 +1,45 @@
 <template>
-  <vue-toc :target="element"/>
+  <section class="max-w-fit max-h-[80vh] overflow-y-auto px-4 py-6" dir="rtl">
+    <div ref="toc">
+      <div v-for="(header, index) in headers" :key="index" dir="ltr">
+        <div v-if="header.tagName === 'H2'">
+          <ul class="flex mx-2 pl-3 list-disc text-[#5f5f5f] dark:text-[#a0aec0]">
+            <li class="mb-0.5">
+              <a
+                :href="`#${header.id}`"
+                class="text-[#4a5568] hover:text-[#8966ea] dark:text-[#cbd5e0] dark:hover:text-[#d5c6fd]"
+              >{{ header.textContent }}</a>
+            </li>
+          </ul>
+        </div>
+        <div v-else-if="header.tagName === 'H3'">
+          <ul class="flex mx-2 pl-6 list-disc text-[#d4d4d4] dark:text-[#a0aec0]">
+            <li class="mb-0.5">
+              <a
+                :href="`#${header.id}`"
+                class="text-[#4a5568] hover:text-[#8966ea] dark:text-[#cbd5e0] dark:hover:text-[#d5c6fd]"
+              >{{ header.textContent }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
-  element: string
-}>()
+defineProps<{ element: string }>()
 </script>
 
-<style type="text/css">
-.vue-toc {
-  direction: rtl;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 1rem 1.5rem;
+<script lang="ts">
+export default {
+  data(props: { element: string }) {
+    return { element: props.element, headers: [] as Element[] }
+  },
+  mounted() {
+    this.headers = Array.from(
+      document.querySelectorAll(`${this.element} h2, ${this.element} h3`)
+    )
+  }
 }
-.vue-toc * {
-  direction: ltr;
-}
-.vue-toc a {
-  color: #4a5568;
-}
-.vue-toc a:hover {
-  color: #8966ea;
-}
-.vue-toc ul {
-  display: flex;
-  margin-block-start: .5rem;
-  margin-block-end: .5rem;
-  padding-inline-start: .75rem;
-  list-style-type: disc;
-  color: #5f5f5f;
-}
-.vue-toc ul ul {
-  margin-left: .5rem;
-  color: #d4d4d4;
-}
-.vue-toc ul > li {
-  margin-bottom: .25rem;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  .vue-toc a { color: #cbd5e0; }
-  .vue-toc a:hover { color: #d5c6fd; }
-  .vue-toc ul { color: #a0aec0; }
-  .vue-toc ul ul { color: #4a5568; }
-}
-</style>
+</script>
