@@ -16,22 +16,22 @@
         <p v-else class="mt-1 sm:mt-0">
           由
           <NuxtLink
-            to="https://developers.cloudflare.com/workers"
+            to="https://cloudflare.com"
             target="_blank"
-            aria-label="Link to Cloudflare Workers Docs"
+            aria-label="Link to Cloudflare"
           >
             <img
               class="inline hover:rotate-6"
-              src="https://img.shields.io/badge/Cloudflare_Workers-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              type="image/svg" alt="Cloudflare Workers badge"
+              src="https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
+              type="image/svg" alt="Cloudflare badge"
             />
           </NuxtLink>
           和
-          <NuxtLink to="https://railway.app" target="_blank" aria-label="Link to Railway">
+          <NuxtLink to="https://render.com" target="_blank" aria-label="Link to Render">
             <img
               class="inline hover:rotate-6"
-              src="https://img.shields.io/badge/Railway-853bce?style=flat-square&logo=railway&logoColor=white"
-              type="image/svg" alt="Railway badge"
+              src="https://img.shields.io/badge/Render-0abfa1?style=flat-square&logo=Render&logoColor=white"
+              type="image/svg" alt="Render badge"
             />
           </NuxtLink>
           驅動
