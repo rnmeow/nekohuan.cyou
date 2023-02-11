@@ -30,6 +30,7 @@ export default {
     GH_PAT: process.env.GH_PAT
   },
   typescript: {
+    target: 'esnext',
     typeCheck: true
   },
   css: [
