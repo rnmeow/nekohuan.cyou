@@ -7,31 +7,31 @@
         </p>
         <p v-if="$route.path === '/blog' || $route.path.includes('/post')" class="mt-1 sm:mt-0">
           <NuxtLink to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-            <img
-              src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
-              class="hover:rotate-6" type="image/png" alt="CC BY-NC-SA 4.0"
+            <NuxtImg
+              src="external/https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              class="hover:rotate-6" format="webp" fit="cover" alt="CC BY-NC-SA 4.0"
             />
           </NuxtLink>
         </p>
         <p v-else class="mt-1 sm:mt-0">
           由
           <NuxtLink
-            to="https://cloudflare.com"
+            to="https://docs.github.com/en/rest"
             target="_blank"
             aria-label="Link to Cloudflare"
           >
-            <img
+            <NuxtImg
               class="inline hover:rotate-6"
-              src="https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              type="image/svg" alt="Cloudflare badge"
+              src="external/https://img.shields.io/badge/GitHub_API-404040?style=flat-square&logo=GitHub&logoColor=white"
+              fit="cover" format="svg" alt="GitHub badge"
             />
           </NuxtLink>
           和
           <NuxtLink to="https://render.com" target="_blank" aria-label="Link to Render">
-            <img
+            <NuxtImg
               class="inline hover:rotate-6"
-              src="https://img.shields.io/badge/Render-0abfa1?style=flat-square&logo=Render&logoColor=white"
-              type="image/svg" alt="Render badge"
+              src="external/https://img.shields.io/badge/Render-0abfa1?style=flat-square&logo=Render&logoColor=white"
+              fit="cover" format="svg" alt="Render badge"
             />
           </NuxtLink>
           驅動

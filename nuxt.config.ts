@@ -1,5 +1,6 @@
 export default {
   modules: [
+    '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts' // Prerelease 3.0.0-1 (https://npm.im/@nuxtjs/google-fonts)
   ],
@@ -36,6 +37,10 @@ export default {
     'normalize.css/normalize.css',
     '@fortawesome/fontawesome/styles.css'
   ],
+  image: {
+    provider: 'imagekit',
+    imagekit: { baseURL: 'https://ik.imagekit.io/mhnj7usua' }
+  },
   googleFonts: {
     preconnect: true,
     preload: true,

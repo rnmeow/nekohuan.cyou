@@ -7,7 +7,7 @@
     <p class="leading-8">
       在網路世界走跳，結交的一群朋友 😀
       <br/>
-      想掛連結？請瀏覽 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="decoration-2 hover:underline">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
+      想掛連結？請瀏覽 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="underline decoration-2 decoration-dashed hover:decoration-solid">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
     </p>
     <hr class="my-8"/>
     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -24,10 +24,10 @@
       >
         <NuxtLink :to="link.link" target="_blank" class="block">
           <div class="flex items-center">
-            <img
-              :src="link.avatar"
+            <NuxtImg
+              :src="`external/${link.avatar}`"
               class="w-16 h-16 rounded-full"
-              alt="avatar"
+              format="webp" height="64px" width="64px" alt="His/Her/Their avatar"
             />
             <div class="ml-4 leading-6">
               <h2 class="font-bold text-neutral-700 dark:text-neutral-300">{{ link.name }}</h2>
