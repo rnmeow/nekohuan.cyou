@@ -45,11 +45,6 @@ export default {
     },
     download: false
   },
-  nitro: {
-    prerender: {
-      routes: ['/']
-    }
-  },
   sourcemap: {
     server: false,
     client: false
