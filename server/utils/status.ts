@@ -7,7 +7,7 @@ function calc(birthday: string) {
 const arr = [
   `${calc(BIRTHDAY)} y/o • Student • Jr. Front-end Coder`
 ]
-STATUS_LIST.forEach((i) => {
+STATUS_LIST.forEach(i => {
   arr.push(i)
 })
 
