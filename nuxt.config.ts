@@ -12,11 +12,10 @@ export default {
       viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       meta: [
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=EmulateIE7' }, // lmfao
-        { name: 'description', content: 'Hi, KuoHuanHuan here!' },
+        { name: 'description', content: 'Hi 👋, KuoHuanHuan here! I\'m a coder student from Taiwan.' },
         { name: 'google', content: 'notranslate' }
       ],
       link: [
-        { rel: 'preconnect', href: 'https://unpkg.com' },
         { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
@@ -45,6 +44,11 @@ export default {
       'Courier+Prime': true
     },
     download: false
+  },
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
   },
   sourcemap: {
     server: false,

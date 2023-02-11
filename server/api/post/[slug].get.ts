@@ -6,7 +6,15 @@ import { GH_API_URL } from '@/config/links'
 
 export default defineEventHandler(async (event) => {
   const post = await fetch(`${GH_API_URL}/contents/posts/${event.context.params.slug}.md`, headers).then(res => res.json())
-  const data = metadataParser(decode(post.content))
+  const data: {
+    metadata: {
+      title: string,
+      datetime: string,
+      description: string,
+      tags: string
+    },
+    content: string
+  } = metadataParser(decode(post.content))
   return {
     slug: post.name.replace('.md', ''),
     title: data.metadata.title,
