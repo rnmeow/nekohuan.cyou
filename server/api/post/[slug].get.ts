@@ -1,11 +1,21 @@
 import metadataParser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
+import { Octokit } from 'octokit'
 import { decode } from 'js-base64'
-import { headers } from '@/server/utils/http-helper'
-import { GH_API_URL } from '@/config/links'
+import { auth } from '@/server/utils/octokit-helper'
+import { REPO_OWNER, REPO_NAME } from '@/config/links'
+
+const octokit = new Octokit(auth)
 
 export default defineEventHandler(async (event: any | Event) => {
-  const post = await fetch(`${GH_API_URL}/contents/posts/${event.context.params.slug}.md`, headers).then(res => res.json())
+  const post = await octokit.request(`GET /repos/{owner}/{repo}/contents/posts/${event.context.params.slug}.md`, {
+    owner: REPO_OWNER,
+    repo: REPO_NAME,
+    headers: {
+      "Content-Type": "application/json",
+      "X-GitHub-API-Version": "2022-11-28"
+    }
+  }).then(res => res.data)
   const data: {
     metadata: {
       title: string,
@@ -18,7 +28,7 @@ export default defineEventHandler(async (event: any | Event) => {
   return {
     slug: post.name.replace('.md', ''),
     title: data.metadata.title,
-    datetime: dayjs(data.metadata.datetime).format('YYYY-MM-DD HH:mm'),
+    datetime: dayjs(data.metadata.datetime),
     tags: data.metadata.tags,
     content: data.content
   }

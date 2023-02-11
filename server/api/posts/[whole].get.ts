@@ -1,8 +1,10 @@
 import metadataParser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
-import { decode } from 'js-base64'
-import { headers } from '@/server/utils/http-helper'
-import { GH_API_URL } from '@/config/links'
+import { Octokit } from 'octokit'
+import { auth } from '@/server/utils/octokit-helper'
+import { REPO_OWNER, REPO_NAME } from '@/config/links'
+
+const octokit = new Octokit(auth)
 
 export default defineEventHandler(async (event: any | Event) => {
   const posts: {
@@ -15,8 +17,23 @@ export default defineEventHandler(async (event: any | Event) => {
     content: string | null
   }[] = []
   let count = 0
-  for (const item of (await fetch(`${GH_API_URL}/contents/posts`, headers).then(res => res.json()))) {
-    const post = metadataParser(decode((await fetch(item.url, headers).then(res => res.json())).content))
+  for (const item of await octokit.request('GET /repos/{owner}/{repo}/contents/posts', {
+      owner: REPO_OWNER,
+      repo: REPO_NAME,
+      headers: {
+        "Content-Type": "application/json",
+        "X-GitHub-API-Version": "2022-11-28"
+      }
+    }).then(res => res.data)
+  ) {
+    const post = metadataParser((await fetch(item.download_url, {
+      headers: {
+        "Content-Type": "text/plain",
+        "X-GitHub-API-Version": "2022-11-28",
+        "Authorization": `token ${useRuntimeConfig().GH_PAT}`,
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15"
+      }
+    }).then(res => res.text())))
     posts.push({
       key: count++,
       slug: item.name.replace('.md', ''),

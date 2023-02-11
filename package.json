@@ -53,6 +53,7 @@
     "markdown-yaml-metadata-parser": "^3.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.0.0",
+    "octokit": "^2.0.14",
     "pangu": "^4.0.7",
     "typescript": "^4.9.4",
     "uslug": "^1.0.4",
