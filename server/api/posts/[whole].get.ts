@@ -4,7 +4,7 @@ import { decode } from 'js-base64'
 import { headers } from '@/server/utils/http-helper'
 import { GH_API_URL } from '@/config/links'
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event: any | Event) => {
   const posts: {
     key: number,
     slug: string,
@@ -12,7 +12,7 @@ export default defineEventHandler(async () => {
     datetime: object,
     description: string,
     tags: string,
-    content: string
+    content: string | null
   }[] = []
   let count = 0
   for (const item of (await fetch(`${GH_API_URL}/contents/posts`, headers).then(res => res.json()))) {
@@ -24,7 +24,7 @@ export default defineEventHandler(async () => {
       datetime: dayjs(post.metadata.datetime),
       description: post.metadata.description,
       tags: post.metadata.tags,
-      content: post.content
+      content: event.context.params.whole === 'yes' ? post.content : null
     })
   }
   return posts
