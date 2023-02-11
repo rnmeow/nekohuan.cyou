@@ -27,7 +27,7 @@
             <NuxtImg
               :src="`external/${link.avatar}`"
               class="w-16 h-16 rounded-full"
-              format="webp" height="64px" width="64px" alt="His/Her/Their avatar"
+              format="webp" height="128px" width="128px" alt="His/Her/Their avatar"
             />
             <div class="ml-4 leading-6">
               <h2 class="font-bold text-neutral-700 dark:text-neutral-300">{{ link.name }}</h2>

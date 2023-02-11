@@ -4,7 +4,8 @@ import { decode } from 'js-base64'
 import { headers } from '@/server/utils/http-helper'
 import { GH_API_URL } from '@/config/links'
 
-export default defineEventHandler(async (event) => {
+// Ref: https://github.com/unjs/h3/blob/main/src/event/event.ts
+export default defineEventHandler(async (event: { context: any }) => {
   const post = await fetch(`${GH_API_URL}/contents/posts/${event.context.params.slug}.md`, headers).then(res => res.json())
   const data: {
     metadata: {
