@@ -21,10 +21,9 @@ export default {
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
       ],
-      script: [
-        { src: '//cdn.jsdelivr.net/gh/kuohuanhuan/cdn@master/no-edge.js' },
-        // { src: '//unpkg.com/jquery@3.6.3/dist/jquery.min.js', type: 'text/javascript' }
-      ]
+      // script: [
+      //  { src: '//unpkg.com/jquery@3.6.3/dist/jquery.min.js', type: 'text/javascript' }
+      // ]
     }
   },
   runtimeConfig: {
