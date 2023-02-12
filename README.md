@@ -1,8 +1,8 @@
 # kuohuanhuan / nekohuan.cyou @ GitHub
 
-![GitHub stars](https://img.shields.io/github/stars/kuohuanhuan/nekohuan.cyou?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/kuohuanhuan/nekohuan.cyou?style=for-the-badge)
-![GitHub build](https://img.shields.io/github/actions/workflow/status/kuohuanhuan/nekohuan.cyou/build-test.yml?style=for-the-badge)
+[![GitHub stars](https://img.shields.io/github/stars/kuohuanhuan/nekohuan.cyou?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/kuohuanhuan/nekohuan.cyou?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/fork)
+[![GitHub build](https://img.shields.io/github/actions/workflow/status/kuohuanhuan/nekohuan.cyou/build-test.yml?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/actions)
 
 這是 `@kuohuanhuan` [網站](https://nekohuan.cyou) 本體的 GitHub 儲存庫。
 
