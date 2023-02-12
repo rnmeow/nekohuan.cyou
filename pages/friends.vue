@@ -12,10 +12,8 @@
     </p>
     <hr class="my-8"/>
     <div class="grid grid-cols-1 md:grid-cols-2">
-      <p v-if="pending">載入中……</p>
       <div
         v-for="link in data"
-        v-else
         :key="link.name"
         class="
           shadow rounded-xl p-4 m-2
@@ -43,9 +41,8 @@
 
 <script lang="ts" setup>
 import { LINKS_JSON_URL } from '@/config/links-json'
-const { pending, data } = useLazyFetch(
-  () => LINKS_JSON_URL, { server: false }
-) as unknown as { pending: boolean, data: {
+const { data } = useAsyncData(() => $fetch(LINKS_JSON_URL)) as unknown as {
+  data: {
     name: string,
     link: string,
     avatar: string,
