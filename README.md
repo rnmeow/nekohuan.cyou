@@ -2,6 +2,7 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/kuohuanhuan/nekohuan.cyou?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/kuohuanhuan/nekohuan.cyou?style=for-the-badge)
+![GitHub build](https://img.shields.io/github/actions/workflow/status/kuohuanhuan/nekohuan.cyou/build-test.yml?style=for-the-badge)
 
 這是 `@kuohuanhuan` [網站](https://nekohuan.cyou) 本體的 GitHub 儲存庫。
 
@@ -62,13 +63,15 @@ pnpm i
 pnpm run dev
 ```
 
-### 用於生產環境佈署
+### 構建
 
-執行以下指令構建：
+執行以下指令進行構建：
 
 ```bash
 pnpm run build
 ```
+
+### 用於生產環境佈署
 
 執行以下指令啟動伺服器（需要 Node.js）：
 
@@ -81,6 +84,12 @@ pnpm run server
 ```bash
 node .output/server/index.mjs
 ```
+
+## 預覽
+
+如果只是需要預覽網站，你可以到此儲存庫的 [Actions 分頁](https://github.com/kuohuanhuan/nekohuan.cyou/actions) 下載最新一個**成功**構建的 artifacts 檔案。
+
+三種系統（Ubuntu Linux, Windows 和 OS X）產生的 artifact 理論上並無差異，下載後解壓縮即可使用。
 
 ### 更多
 
