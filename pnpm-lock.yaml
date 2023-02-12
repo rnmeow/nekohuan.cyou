@@ -21,6 +21,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.8.0
+  h3: ^1.1.0
   highlight.js: ^11.7.0
   js-base64: ^3.7.5
   markdown-it: ^13.0.1
@@ -58,6 +59,7 @@ dependencies:
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.6
   '@types/markdown-it': 12.2.3
   dayjs: 1.11.7
+  h3: 1.1.0
   highlight.js: 11.7.0
   js-base64: 3.7.5
   markdown-it: 13.0.1
@@ -4876,6 +4878,15 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       duplexer: 0.1.2
+    dev: false
+
+  /h3/1.1.0:
+    resolution: {integrity: sha512-kx3u+RMzY963fU8NNT2ePWgsryAn9DNztPqbHia/M7HgA+rtXKjHjED9/uidcYPmImNwAfJsCachCzh2T3QH2A==}
+    dependencies:
+      cookie-es: 0.5.0
+      destr: 1.2.2
+      radix3: 1.0.0
+      ufo: 1.0.1
     dev: false
 
   /h3/1.4.0:

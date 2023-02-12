@@ -2,6 +2,7 @@
   <section class="relative mx-auto max-w-5xl min-h-screen px-8 py-24 dark:text-neutral-300">
     <Head>
       <Title>留言板 | kuohuanhuan</Title>
+      <Meta name="description" content="嗨 👋，感謝你到訪我的網站 😀——這裡是留言板，歡迎留言 😉"/>
     </Head>
     <h1 class="font-bold text-neutral-800 dark:text-neutral-200">留言板</h1>
     <p class="leading-8">

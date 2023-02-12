@@ -2,6 +2,7 @@
   <section class="relative mx-auto max-w-5xl min-h-screen px-8 py-24 dark:text-neutral-300">
     <Head>
       <Title>友人帳 | kuohuanhuan</Title>
+      <Meta name="description" content="在網路世界走跳，結交的一群朋友 😀（歡迎掛連結 😉）"/>
     </Head>
     <h1 class="font-bold text-neutral-800 dark:text-neutral-200">友情連結</h1>
     <p class="leading-8">
@@ -13,9 +14,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2">
       <p v-if="pending">載入中……</p>
       <div
-        v-for="link in links"
+        v-for="link in data"
         v-else
-        :key="link"
+        :key="link.name"
         class="
           shadow rounded-xl p-4 m-2
           transition duration-100 ease-in-out hover:text-neutral-800 hover:scale-[102.5%] hover:shadow-lg
@@ -42,7 +43,15 @@
 
 <script lang="ts" setup>
 import { LINKS_JSON_URL } from '@/config/links-json'
-const { pending, data: links } = useLazyFetch<any>(() => LINKS_JSON_URL, { server: false })
+const { pending, data } = useLazyFetch(
+  () => LINKS_JSON_URL, { server: false }
+) as unknown as { pending: boolean, data: {
+    name: string,
+    link: string,
+    avatar: string,
+    descr: string
+  }[]
+}
 </script>
 
 <script lang="ts">

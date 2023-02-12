@@ -2,6 +2,18 @@
   <article class="relative mx-auto max-w-5xl px-8 py-24 leading-8 font-sans">
     <Head>
       <Title>{{ `${data.title} | khh.log` }}</Title>
+      <Meta name="description" :content="data.description"/>
+      <Meta name="og:title" :content="data.title"/>
+      <Meta name="og:description" :content="data.description"/>
+      <Meta name="og:type" content="article"/>
+      <Meta name="og:url" :content="`https://nekohuan.cyou/post/${data.slug}`"/>
+      <!-- <Meta name="og:image" :content="<url>"/> -->
+      <Meta name="twitter:card" content="summary_large_image"/>
+      <Meta name="twitter:site" content="https://nekohuan.cyou"/>
+      <Meta name="twitter:creator" content="@kuohuanhuan"/>
+      <Meta name="twitter:title" :content="data.title"/>
+      <Meta name="twitter:description" :content="data.description"/>
+      <!-- <Meta name="twitter:image" :content="<url>"/> -->
     </Head>
     <h1 class="font-bold dark:text-neutral-200">{{ data.title }}</h1>
     <div class="flex text-sm font-courier dark:text-neutral-300">
@@ -71,7 +83,15 @@ import 'highlight.js/styles/vs2015.css'
 import Pangu from 'pangu'
 
 const { slug } = useRoute().params
-const { data }: any = await useAsyncData(() => $fetch(`/api/post/${slug}`))
+const { data } = await useAsyncData(() => $fetch(`/api/post/${slug}`)) as unknown as { data: {
+  key: number,
+  slug: string,
+  title: string,
+  datetime: string,
+  description: string,
+  tags: string,
+  content: string | null
+} }
 const mdParser = new MarkdownIt({
   html: true,
   xhtmlOut: true,
@@ -87,7 +107,7 @@ const mdParser = new MarkdownIt({
 <script lang="ts">
 export default {
   methods: {
-    returnPostTime (datetime: string, devide: number) {
+    returnPostTime (datetime: string, devide: number): number {
       return Math.floor((new Date().getTime() - new Date(datetime).getTime()) / (devide * 60000))
     }
   }
