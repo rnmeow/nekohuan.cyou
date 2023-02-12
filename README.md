@@ -38,6 +38,11 @@
 
 ……還有更多。
 
+## 銘謝
+
+- [Render](https://render.com) 提供 Web Service 託管服務。
+- [GitHub](https://github.com) 提供 Git 儲存庫和 GitHub Actions CI 服務。
+
 ## 開發
 
 本專案使用 [PNPM](https://pnpm.io) 進行套件管理。
@@ -97,7 +102,7 @@ _**（注意：請在 `server/` 資料夾內使用編輯器搜尋 `"GH_PAT":`，
 
 ### 更多
 
-請瀏覽 [開發文件](https://nuxt.com/docs) 以獲得更多說明。
+請瀏覽 [Nuxt 3 開發文件](https://nuxt.com/docs) 以獲得更多說明。
 
 ## 授權條款 / License
 
