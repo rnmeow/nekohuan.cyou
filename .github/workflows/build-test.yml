@@ -1,0 +1,62 @@
+name: Build Test
+
+on:
+  # Run GH Actions if push to `master` branch
+  push:
+    branches:
+      - master # ps. change to `main` if ur default branch follow's GitHub
+  pull_request:
+    branches:
+      - master # ps. as above
+
+jobs:
+  build:
+    # Use macOS, Ubuntu and Windows to test build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ macos-12, ubuntu-22.04, windows-2022 ]
+    steps:
+      # Get src
+      - name: Get source file from repo
+        uses: actions/checkout@v3
+      # Use Node.js Version 18.x
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # ps. change to `14` if coz any problem(s)
+      # Install PNPM 7.x
+      - name: Install PNPM 7
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
+      # Get PNPM store path
+      - name: Get PNPM store path
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      # Setup PNPM cache
+      - name: Setup PNPM cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-${{ runner.os }}-kuaikuai-kotex
+      # Install deps
+      - name: Install deps
+        run: pnpm i
+      # Test build
+      - name: Test build
+        run: pnpm run build
+      # Upload build files
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-on-${{ matrix.os }}
+          path: .output/
+          retention-days: 15
+
+# Authored by KuoHuanHuan.
