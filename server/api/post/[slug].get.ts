@@ -7,7 +7,7 @@ import { REPO_OWNER, REPO_NAME } from '@/config/links'
 
 const octokit = new Octokit(auth)
 
-export default defineEventHandler(async (event: any | Event) => {
+export default defineEventHandler(async (event) => {
   const post = await octokit.request(`GET /repos/{owner}/{repo}/contents/posts/${event.context.params.slug}.md`, {
     owner: REPO_OWNER,
     repo: REPO_NAME,
@@ -30,6 +30,7 @@ export default defineEventHandler(async (event: any | Event) => {
     title: data.metadata.title,
     datetime: dayjs(data.metadata.datetime),
     tags: data.metadata.tags,
+    description: data.metadata.description,
     content: data.content
   }
 })

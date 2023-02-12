@@ -6,7 +6,7 @@ import { REPO_OWNER, REPO_NAME } from '@/config/links'
 
 const octokit = new Octokit(auth)
 
-export default defineEventHandler(async (event: any | Event) => {
+export default defineEventHandler(async (event) => {
   const posts: {
     key: number,
     slug: string,
@@ -41,7 +41,7 @@ export default defineEventHandler(async (event: any | Event) => {
       datetime: dayjs(post.metadata.datetime),
       description: post.metadata.description,
       tags: post.metadata.tags,
-      content: event.context.params.whole === 'yes' ? post.content : null
+      content: event.context.params.content === 'yes' ? post.content : null
     })
   }
   return posts
