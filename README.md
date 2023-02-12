@@ -71,6 +71,8 @@ pnpm run dev
 pnpm run build
 ```
 
+_**（注意：請先設定一個名為 `GH_PAT` 的環境變數，內容是一個 GitHub Personal Access Token。如果沒有，[請到此處產生](https://github.com/settings/tokens)。）**_
+
 ### 用於生產環境佈署
 
 執行以下指令啟動伺服器（需要 Node.js）：
@@ -87,9 +89,11 @@ node .output/server/index.mjs
 
 ## 預覽
 
-如果只是需要預覽網站，你可以到此儲存庫的 [Actions 分頁](https://github.com/kuohuanhuan/nekohuan.cyou/actions) 下載最新一個**成功**構建的 artifacts 檔案。
+如果只是需要預覽網站，你可以到此儲存庫的 [Actions 分頁](https://github.com/kuohuanhuan/nekohuan.cyou/actions) 下載最新一個**成功**構建 的 Actions 任務所附帶的 artifacts 檔案。
 
-三種系統（Ubuntu Linux, Windows 和 OS X）產生的 artifact 理論上並無差異，下載後解壓縮即可使用。
+三種作業系統（Ubuntu Linux, Windows 和 OS X）所產生的 artifact 理論上並無差異，下載後解壓縮即可使用。
+
+_**（注意：請在 `server/` 資料夾內使用編輯器搜尋 `"GH_PAT":`，定位到 `config.mjs` 檔案，並在後方的空字串填入你自己的 GitHub Personal Access Token。如果沒有，[請到此處產生](https://github.com/settings/tokens)。）**_
 
 ### 更多
 
