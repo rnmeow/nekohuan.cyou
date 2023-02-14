@@ -1,17 +1,12 @@
 import metadataParser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
-import { Octokit } from 'octokit'
-import { decode } from 'js-base64'
 import { REPO_OWNER, REPO_NAME } from '@/config/links'
+import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async (event) => {
-  const post = await new Octokit(useRuntimeConfig().GH_PAT).request(
-    `GET /repos/${REPO_OWNER}/${REPO_NAME}/contents/posts/${event.context.params.slug}.md`, {
-    headers: {
-      "Content-Type": "application/json",
-      "X-GitHub-API-Version": "2022-11-28"
-    }
-  }).then(res => res.data)
+  const post = await fetch(
+    `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/posts/${event.context.params.slug}.md`
+  ).then(res => res.text())
   const data: {
     metadata: {
       title: string,
@@ -20,9 +15,9 @@ export default defineEventHandler(async (event) => {
       tags: string
     },
     content: string
-  } = metadataParser(decode(post.content))
+  } = metadataParser(post)
   return {
-    slug: post.name.replace('.md', ''),
+    slug: event.context.params.slug,
     title: data.metadata.title,
     datetime: dayjs(data.metadata.datetime) as dayjs.Dayjs,
     tags: data.metadata.tags,

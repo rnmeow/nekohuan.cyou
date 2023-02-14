@@ -20,7 +20,6 @@
 - [Tailwind CSS](https://tailwindcss.com)（Utility-First CSS 框架）
 - [TypeScript](https://www.typescriptlang.org)（JavaScript 的超集合程式語言）
 - [Node.js](https://nodejs.org/en)（JavaScript Runtime & 伺服器端）
-- [Octokit.js](https://docs.github.com/en/rest/overview/libraries)（GitHub API 的官方函式庫）
 - [Font Awesome](https://fontawesome.com)（圖示套件 & 函式庫）
 - [giscus](https://giscus.app)（基於 GitHub Discussion 的靜態留言系統）
 
