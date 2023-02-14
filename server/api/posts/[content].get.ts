@@ -1,48 +1,32 @@
-import metadataParser from 'markdown-yaml-metadata-parser'
+import parser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
-import { Octokit } from 'octokit'
-import { auth } from '@/server/utils/octokit-helper'
-import { REPO_OWNER, REPO_NAME } from '@/config/links'
-
-const octokit = new Octokit(auth)
+import { decode } from 'js-base64'
+import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async (event) => {
   const posts: {
     key: number,
     slug: string,
     title: string,
-    datetime: object,
+    datetime: dayjs.Dayjs,
     description: string,
     tags: string,
     content: string | null
   }[] = []
   let count = 0
-  for (const item of await octokit.request('GET /repos/{owner}/{repo}/contents/posts', {
-      owner: REPO_OWNER,
-      repo: REPO_NAME,
-      headers: {
-        "Content-Type": "application/json",
-        "X-GitHub-API-Version": "2022-11-28"
-      }
-    }).then(res => res.data)
+  for (
+    const i of await fetch(`https://rawcdn.githack.com/kuohuanhuan/blog/${COMMIT_HASH}/posts.json`).then(res => res.json())
   ) {
-    const post = metadataParser((await fetch(item.download_url, {
-      headers: {
-        "Content-Type": "text/plain",
-        "X-GitHub-API-Version": "2022-11-28",
-        "Authorization": `token ${useRuntimeConfig().GH_PAT}`,
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15"
-      }
-    }).then(res => res.text())))
+    const post = parser(decode(i.content))
     posts.push({
       key: count++,
-      slug: item.name.replace('.md', ''),
+      slug: i.slug,
       title: post.metadata.title,
-      datetime: dayjs(post.metadata.datetime),
+      datetime: dayjs(post.metadata.datetime) as dayjs.Dayjs,
       description: post.metadata.description,
       tags: post.metadata.tags,
       content: event.context.params.content === 'yes' ? post.content : null
     })
   }
-  return posts
+  return posts.sort((a, b) => !dayjs(a.datetime).isAfter(b.datetime) ? 1 : -1)
 })

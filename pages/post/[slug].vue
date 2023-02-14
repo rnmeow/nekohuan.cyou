@@ -101,7 +101,9 @@ const mdParser = new MarkdownIt({
       return HighlightJS.highlight(str, { language: lang }).value
     }
   }
-}).use(Emoji).use(Anchor, { slugify: (s: string) => Uslug(s) }).use(Lazyload, { decoding: true })
+}).use(Emoji).use(Anchor, { slugify: (s: string) => Uslug(s) }).use(Lazyload, {
+  decoding: true
+})
 </script>
 
 <script lang="ts">

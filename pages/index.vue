@@ -50,7 +50,7 @@
 
 <script lang="ts" setup>
 import VueWriter from 'vue-writer'
-import { status } from '@/server/utils/status'
+import { status } from '@/utils/status'
 import { SOCIAL_LINKS } from '@/config/links'
 import { MAIL_ADDRESS } from '@/config/personal-data'
 </script>
