@@ -62,7 +62,7 @@
 
 <script lang="ts" setup>
 const { data } = await useAsyncData(
-  () => $fetch('/api/posts/absolutely-fucking-no')
+  () => $fetch('/api/posts/false')
 ) as unknown as { data: {
   slug: string,
   title: string,
