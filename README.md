@@ -49,7 +49,7 @@
 
 ### 環境要求
 
-- [Node.js](https://nodejs.org/en) v16 LTS 以上（v18 以上為佳，最低已測試版本為 v17）。
+- [Node.js](https://nodejs.org/en) v16 LTS 以上（v18 以上為佳）。
 - [PNPM](https://pnpm.io) v7 以上（使用 `npm i pnpm@>=7 -g` 安裝）。
 
 ### 安裝依賴

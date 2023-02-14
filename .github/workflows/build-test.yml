@@ -15,16 +15,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ macos-12, ubuntu-22.04, windows-2022 ]
+        os: [ macos-latest, ubuntu-latest, windows-latest ]
+        node-version: [ 16, 18, latest ]
     steps:
       # Get src
       - name: Get source file from repo
         uses: actions/checkout@v3
-      # Use Node.js Version 18.x
-      - name: Use Node.js 18
+      # Setup Node.js (Specified version)
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # ps. change to `14` if coz any problem(s)
+          node-version: ${{ matrix.node-version }}
       # Install PNPM 7.x
       - name: Install PNPM 7
         uses: pnpm/action-setup@v2
@@ -35,19 +36,17 @@ jobs:
       - name: Get PNPM store path
         id: pnpm-cache
         shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       # Setup PNPM cache
       - name: Setup PNPM cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-store-${{ runner.os }}-kuaikuai-kotex
+          restore-keys: pnpm-store-${{ runner.os }}-kuaikuai-kotex
       # Install deps
       - name: Install deps
-        run: pnpm i
+        run: pnpm i --frozen-lockfile
       # Test build
       - name: Test build
         run: pnpm run build
@@ -57,6 +56,6 @@ jobs:
         with:
           name: built-on-${{ matrix.os }}
           path: .output/
-          retention-days: 15
+          retention-days: 5
 
 # Authored by KuoHuanHuan.
