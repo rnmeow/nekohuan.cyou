@@ -4,10 +4,8 @@ import { Octokit } from 'octokit'
 import { decode } from 'js-base64'
 import { REPO_OWNER, REPO_NAME } from '@/config/links'
 
-const octokit = new Octokit(useRuntimeConfig().GH_PAT)
-
 export default defineEventHandler(async (event) => {
-  const post = await octokit.request(
+  const post = await new Octokit(useRuntimeConfig().GH_PAT).request(
     `GET /repos/${REPO_OWNER}/${REPO_NAME}/contents/posts/${event.context.params.slug}.md`, {
     headers: {
       "Content-Type": "application/json",

@@ -2,6 +2,7 @@ import parser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
 import { decode } from 'js-base64'
 import { COMMIT_HASH } from '@/config/source'
+import { REPO_NAME, REPO_OWNER } from '@/config/links'
 
 export default defineEventHandler(async (event) => {
   const posts: {
@@ -15,7 +16,9 @@ export default defineEventHandler(async (event) => {
   }[] = []
   let count = 0
   for (
-    const i of await fetch(`https://rawcdn.githack.com/kuohuanhuan/blog/${COMMIT_HASH}/posts.json`).then(res => res.json())
+    const i of await fetch(
+      `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/posts.json`
+    ).then(res => res.json())
   ) {
     const post = parser(decode(i.content))
     posts.push({

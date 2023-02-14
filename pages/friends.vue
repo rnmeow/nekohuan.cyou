@@ -40,8 +40,12 @@
 </template>
 
 <script lang="ts" setup>
-import { LINKS_JSON_URL } from '@/config/links-json'
-const { data } = useAsyncData(() => $fetch(LINKS_JSON_URL)) as unknown as {
+import { COMMIT_HASH } from '@/config/source'
+import { REPO_NAME, REPO_OWNER } from '@/config/links'
+
+const { data } = useAsyncData(
+  () => $fetch(`https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/links.json`)
+) as unknown as {
   data: {
     name: string,
     link: string,
