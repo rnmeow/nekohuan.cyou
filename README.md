@@ -40,8 +40,8 @@
 
 ## 銘謝
 
-- [Render](https://render.com) 提供 Web Service 託管服務。
 - [GitHub](https://github.com) 提供 Git 儲存庫和 GitHub Actions CI 服務。
+- [Railway](https://railway.app) 提供 Web Service 託管服務。
 
 ## 開發
 
