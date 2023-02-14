@@ -54,8 +54,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: built-on-${{ matrix.os }}
+          name: built-on-os_${{ matrix.os }}-node_${{ matrix.node-version }}
           path: .output/
-          retention-days: 5
+          retention-days: 3
 
 # Authored by KuoHuanHuan.
