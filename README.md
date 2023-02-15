@@ -6,10 +6,7 @@
 
 這是 `@kuohuanhuan` [網站](https://nekohuan.cyou) 本體的 GitHub 儲存庫。
 
-其它儲存庫：
-
-- khh.log 網誌（_**若要添加友情連結，請前往這裡**_）：https://github.com/kuohuanhuan/blog
-- RSS Feed 伺服器：https://github.com/kuohuanhuan/blog-rss
+`khh.log 網誌` 儲存庫（_**若要添加友情連結，請前往這裡**_）：https://github.com/kuohuanhuan/blog
 
 ## 技術堆疊
 
