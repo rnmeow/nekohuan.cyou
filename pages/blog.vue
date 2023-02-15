@@ -5,7 +5,7 @@
       <Meta name="description" content="Hello world! $ curl -i https://nekohuan.cyou"/>
     </Head>
     <h1 class="font-bold text-neutral-800 dark:text-neutral-200">網誌</h1>
-    <hr class="my-8"/>
+    <hr class="my-8 dark:border-neutral-500"/>
     <PostCard/>
   </section>
 </template>

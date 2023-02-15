@@ -10,7 +10,7 @@
       <br/>
       想掛連結？請瀏覽 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="underline decoration-2 decoration-dashed hover:decoration-solid">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
     </p>
-    <hr class="my-8"/>
+    <hr class="my-8 dark:border-neutral-500"/>
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div
         v-for="link in data"

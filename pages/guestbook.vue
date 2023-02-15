@@ -8,7 +8,7 @@
     <p class="leading-8">
       嗨 👋，感謝你到訪我的網站 😀——這裡是留言板，歡迎留言 😉
     </p>
-    <hr class="my-8"/>
+    <hr class="my-8 dark:border-neutral-500"/>
     <giscus
       repo="kuohuanhuan/blog"
       repo-id="R_kgDOI3I4HA"

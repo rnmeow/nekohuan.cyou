@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { decode } from 'js-base64'
-import { COMMIT_HASH } from '@/config/source'
 import { REPO_NAME, REPO_OWNER } from '@/config/links'
+import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async () => {
   const posts: {
