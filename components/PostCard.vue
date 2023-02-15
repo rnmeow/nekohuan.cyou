@@ -61,20 +61,18 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = await useAsyncData(
-  () => $fetch('/api/posts/false')
-) as unknown as { data: {
-  slug: string,
-  title: string,
-  datetime: string,
-  tags: string,
-  content: string,
-  // object properties
-  length: number, slice: Function
-} }
+const { data } = await useAsyncData(() => $fetch('/api/posts')) as unknown as {
+  data: {
+    key: number,
+    slug: string,
+    title: string,
+    datetime: string,
+    description: string,
+    tags: string[]
+  }[]
+}
 const pageSize = 8
-// eslint-disable-next-line prefer-const
-let currentPage = 1
+const currentPage = 1
 </script>
 
 <script lang="ts">
