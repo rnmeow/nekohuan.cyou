@@ -10,9 +10,9 @@
         dark:shadow-neutral-700 dark:hover:shadow-md dark:hover:shadow-neutral-700
       "
     >
-      <article class="flex-grow space-y-4">
-        <h2 class="text-lg font-bold leading-4 text-neutral-800 dark:text-neutral-200">{{ post.title }}</h2>
-        <p class="text-sm leading-6 text-neutral-700 subpixel-antialiased dark:text-neutral-300">{{ post.description }}</p>
+      <article class="flex-grow space-y-4 leading-6">
+        <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">{{ post.title }}</h2>
+        <p class="text-sm text-neutral-700 subpixel-antialiased dark:text-neutral-300">{{ post.description }}</p>
       </article>
       <div class="flex text-sm">
         <p class="mr-1">

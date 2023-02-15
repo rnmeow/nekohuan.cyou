@@ -1,5 +1,5 @@
 <template>
-  <article class="relative mx-auto max-w-5xl px-8 py-24 leading-8 font-sans">
+  <article class="relative mx-auto max-w-5xl px-8 py-24 leading-10 font-sans">
     <Head>
       <Title>{{ `${data.title} | khh.log` }}</Title>
       <Meta name="description" :content="data.description"/>
