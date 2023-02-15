@@ -9,8 +9,11 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module'
   },
-  plugins: [],
-  rules: {},
+  plugins: ['prettier'],
+  rules: {
+    'no-undef': 'off',
+    'prettier/prettier': 'warning'
+  },
   overrides: [
     {
       files: [
