@@ -2,11 +2,10 @@
 
 # nodejs
 current node
-maintained node versions
-node > 16
+node > 16 and maintained node versions
 # browsers
 last 5 versions
 unreleased versions
-since 2022 and supports avif
+since 2022 and not Edge >= 88
 Firefox ESR
 not dead
