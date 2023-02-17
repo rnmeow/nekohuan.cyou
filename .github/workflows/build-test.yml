@@ -42,7 +42,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: pnpm-store-${{ runner.os }}-kuaikuai-kotex
       # Install deps
       - name: Install deps
@@ -54,7 +54,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: built-on-os_${{ matrix.os }}-node_${{ matrix.node-version }}
+          name: built-on_${{ runner.os }}_${{ matrix.node-version }}
           path: .output/
           retention-days: 3
 
