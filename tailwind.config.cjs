@@ -1,3 +1,5 @@
+// Tailwind <https://tailwindcss.com>
+
 /** @type { import('tailwindcss').Config } */
 module.exports = {
   content: [

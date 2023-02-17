@@ -1,3 +1,5 @@
+// ESLint <https://eslint.org>
+
 module.exports = {
   env: {
     browser: true,

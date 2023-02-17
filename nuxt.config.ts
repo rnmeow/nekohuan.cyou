@@ -1,3 +1,5 @@
+// Nuxt 3 <https://nuxt.com/docs>
+
 export default {
   modules: [
     '@nuxt/image-edge',

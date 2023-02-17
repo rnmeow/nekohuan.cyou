@@ -1,3 +1,5 @@
+// Prettier <https://prettier.io>
+
 module.exports = {
   plugins: [
     'prettier-plugin-tailwindcss'

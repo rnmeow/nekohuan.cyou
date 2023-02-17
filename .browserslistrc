@@ -1,10 +1,12 @@
-# browsers supported
+# Browserslist <https://browsersl.ist>
 
+# nodejs
+current node
 maintained node versions
-last 5 version
+node > 16
+# browsers
+last 5 versions
 unreleased versions
+since 2022 and supports avif
 Firefox ESR
-> 2%
-since 2021
 not dead
-not IE 11
