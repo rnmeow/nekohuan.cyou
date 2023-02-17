@@ -1,5 +1,6 @@
-<!-- eslint-disable-next-line vue/no-multiple-template-root-->
-<template>Redirecting...</template>
+<template>
+  <p>Redirecting...</p>
+</template>
 
 <script lang="ts" setup>
 await navigateTo({ path: '/' }, { redirectCode: 301 })
