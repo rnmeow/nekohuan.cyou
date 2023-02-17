@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master # ps. change to `main` if ur default branch follow's GitHub
+  # Run GH Actions if merge request to `master` branch
   pull_request:
     branches:
       - master # ps. as above
@@ -42,9 +43,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: pnpm-store-${{ runner.os }}-kuaikuai-kotex
-      # Install deps
+          key: pnpm-store-${{ matrix.os }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: pnpm-store-${{ matrix.os }}-${{ matrix.node-version }}-kuaikuai-kotex
+      # Install dependencies
       - name: Install deps
         run: pnpm i --frozen-lockfile
       # Test build
@@ -54,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: built-on_${{ runner.os }}_${{ matrix.node-version }}
+          name: built-on__os_${{ matrix.os }}__nodejs_${{ matrix.node-version }}
           path: .output/
           retention-days: 3
 
