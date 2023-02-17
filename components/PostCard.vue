@@ -72,7 +72,7 @@ const { data } = await useAsyncData(() => $fetch('/api/posts')) as unknown as {
   }[]
 }
 const pageSize = 8
-const currentPage = 1
+let currentPage = 1
 </script>
 
 <script lang="ts">
