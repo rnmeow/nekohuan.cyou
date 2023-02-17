@@ -17,6 +17,7 @@ export default {
         { name: 'google', content: 'notranslate' }
       ],
       link: [
+        { rel: 'preconnect', href: 'https://ik.imagekit.io' },
         { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
