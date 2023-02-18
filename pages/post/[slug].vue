@@ -37,7 +37,7 @@
               <!-- eslint-disable vue/no-v-html -->
               <div
                 id="content" class="my-6 prose prose-neutral dark:prose-invert"
-                v-html="Pangu.spacing(mdParser.render(data.content))"
+                v-html="MDIt.render(data.content)"
               ></div>
             </div>
             <aside>
@@ -80,8 +80,6 @@ import HighlightJS from 'highlight.js'
 import Lazyload from 'markdown-it-image-lazy-loading'
 import 'highlight.js/styles/vs2015.css'
 
-import Pangu from 'pangu'
-
 const { slug } = useRoute().params
 const { data } = await useAsyncData(() => $fetch(`/api/post/${slug}`)) as unknown as { data: {
   key: number,
@@ -92,7 +90,8 @@ const { data } = await useAsyncData(() => $fetch(`/api/post/${slug}`)) as unknow
   tags: string,
   content: string | null
 } }
-const mdParser = new MarkdownIt({
+
+const MDIt = new MarkdownIt({
   html: true,
   xhtmlOut: true,
   typographer: true,
