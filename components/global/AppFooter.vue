@@ -18,22 +18,16 @@
           <NuxtLink
             to="https://cloudflare.com"
             target="_blank"
+            class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
             aria-label="Link to Cloudflare"
-          >
-            <NuxtImg
-              class="inline hover:rotate-6"
-              src="external/https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              fit="cover" type="image/svg" alt="Cloudflare badge"
-            />
-          </NuxtLink>
+          >Cloudflare</NuxtLink>
           和
-          <NuxtLink to="https://railway.app" target="_blank" aria-label="Link to Railway">
-            <NuxtImg
-              class="inline hover:rotate-6"
-              src="external/https://img.shields.io/badge/Railway-853bce?style=flat-square&logo=railway&logoColor=white"
-              fit="cover" type="image/svg" alt="Railway badge"
-            />
-          </NuxtLink>
+          <NuxtLink
+            to="https://zeabur.com"
+            target="_blank"
+            class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
+            aria-label="Link to Zeabur"
+          >Zeabur</NuxtLink>
           驅動
         </p>
       </div>
