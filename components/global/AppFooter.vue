@@ -20,14 +20,21 @@
             target="_blank"
             class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
             aria-label="Link to Cloudflare"
-          >Cloudflare</NuxtLink>
+          >
+            <NuxtImg
+              class="inline hover:rotate-6"
+              src="external/https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
+              fit="cover" type="image/svg" alt="Cloudflare badge"
+            />
+          </NuxtLink>
           和
-          <NuxtLink
-            to="https://zeabur.com"
-            target="_blank"
-            class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
-            aria-label="Link to Zeabur"
-          >Zeabur</NuxtLink>
+          <NuxtLink to="https://vercel.com" target="_blank" aria-label="Link to Vercel">
+            <NuxtImg
+              class="inline hover:rotate-6"
+              src="external/https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"
+              fit="cover" type="image/svg" alt="Vercel badge"
+            />
+          </NuxtLink>
           驅動
         </p>
       </div>
