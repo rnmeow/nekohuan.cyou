@@ -5,7 +5,7 @@ import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async (event) => {
   const post = await fetch(
-    `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/posts/${event.context.params.slug}.md`
+    `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/posts/${event.context.params!.slug}.md`
   ).then(res => res.text())
   const data: {
     metadata: {
@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
     content: string
   } = metadataParser(post)
   return {
-    slug: event.context.params.slug,
+    slug: event.context.params!.slug,
     title: data.metadata.title,
     datetime: dayjs(data.metadata.datetime) as dayjs.Dayjs,
     tags: data.metadata.tags,
