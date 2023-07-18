@@ -19,44 +19,24 @@ jobs:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
         node-version: [ 16, 18, latest ]
     steps:
-      # Get src
-      - name: Get source file from repo
+      - name: Checkout
         uses: actions/checkout@v3
-      # Setup Node.js (Specified version)
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      # Install PNPM 7.x
-      - name: Install PNPM 7
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: false
-      # Get PNPM store path
-      - name: Get PNPM store path
-        id: pnpm-cache
-        shell: bash
-        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-      # Setup PNPM cache
-      - name: Setup PNPM cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: pnpm-store-${{ matrix.os }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: pnpm-store-${{ matrix.os }}-${{ matrix.node-version }}-kuaikuai-kotex
-      # Install dependencies
+          cache: yarn
       - name: Install deps
-        run: pnpm i --frozen-lockfile
-      # Test build
+        run: yarn install --frozen-lockfile
       - name: Test build
-        run: pnpm run build
-      # Upload build files
+        run: yarn build
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: built-on__os_${{ matrix.os }}__nodejs_${{ matrix.node-version }}
-          path: .output/
+          path: ./.output
           retention-days: 3
 
-# Authored by KuoHuanHuan.
+# Authored by Defer.
