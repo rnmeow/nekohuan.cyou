@@ -15,8 +15,7 @@
     }
   },
   "engines": {
-    "node": ">=16",
-    "pnpm": ">=7"
+    "node": "16"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -55,7 +54,6 @@
     "markdown-yaml-metadata-parser": "^3.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.6.3",
-    "octokit": "^3.0.0",
     "typescript": "^5.1.6",
     "uslug": "^1.0.4",
     "vue": "^3.3.4",
