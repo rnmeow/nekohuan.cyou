@@ -37,7 +37,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@giscus/vue": "^2.3.0",
-    "@nuxt/image-edge": "1.0.0-rc.1-28143901.afe4120",
+    "@nuxt/image-edge": "1.0.0-rc.1-28180077.d51e794",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/typography": "^0.5.9",
