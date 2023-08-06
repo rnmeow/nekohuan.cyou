@@ -20,12 +20,12 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   {
     key: 0,
     icon: 'github',
-    href: 'https://github.com/kuohuanhuan'
+    href: 'https://github.com/rnmeow'
   },
   {
     key: 1,
     icon: 'bitbucket',
-    href: 'https://bitbucket.org/kuohuanhuan'
+    href: 'https://bitbucket.org/rnmeow'
   },
   {
     key: 2,
@@ -35,7 +35,7 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   {
     key: 3,
     icon: 'telegram',
-    href: 'https://telegram.me/kuohuanhuan'
+    href: 'https://telegram.me/rnmeow'
   },
   {
     key: 4,

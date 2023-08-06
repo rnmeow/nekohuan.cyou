@@ -1,4 +1,4 @@
-export const MAIL_ADDRESS = 'hi@nekohuan.cyou'
+export const MAIL_ADDRESS = 'mailbox@rnmeow.com'
 
 export const BIRTHDAY: string = atob('MjAwOC0xMC0xOQ==')
 
