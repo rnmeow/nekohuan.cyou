@@ -1,12 +1,13 @@
-# kuohuanhuan / nekohuan.cyou @ GitHub
+# rnmeow / nekohuan.cyou @ GitHub
 
-[![GitHub stars](https://img.shields.io/github/stars/kuohuanhuan/nekohuan.cyou?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/kuohuanhuan/nekohuan.cyou?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/fork)
-[![GitHub build](https://img.shields.io/github/actions/workflow/status/kuohuanhuan/nekohuan.cyou/build-test.yml?style=for-the-badge)](https://github.com/kuohuanhuan/nekohuan.cyou/actions)
+[![GitHub stars](https://img.shields.io/github/stars/rnmeow/nekohuan.cyou?style=for-the-badge)](https://github.com/rnmeow/nekohuan.cyou/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rnmeow/nekohuan.cyou?style=for-the-badge)](https://github.com/rnmeow/nekohuan.cyou/fork)
+[![GitHub build](https://img.shields.io/github/actions/workflow/status/rnmeow/nekohuan.cyou/build-test.yml?style=for-the-badge)](https://github.com/rnmeow/nekohuan.cyou/actions)
 
-這是 `@kuohuanhuan` [網站](https://nekohuan.cyou) 本體的 GitHub 儲存庫。
+這是我 [網站](https://nekohuan.cyou) 本體的 GitHub 儲存庫。
 
-`khh.log 網誌` 儲存庫（_**若要添加友情連結，請前往這裡**_）：https://github.com/kuohuanhuan/blog
+~~網誌儲存庫（_若要添加友情連結，請前往這裡_）：<https://github.com/rnmeow/blog>~~  
+**正在重寫新版網站，請暫時勿添加友情連結，感謝。**
 
 ## 技術堆疊
 
@@ -20,7 +21,7 @@
 - [Font Awesome](https://fontawesome.com)（圖示套件 & 函式庫）
 - [giscus](https://giscus.app)（基於 GitHub Discussion 的靜態留言系統）
 
-……還有更多——檢視 [`package.json`](https://github.com/kuohuanhuan/nekohuan.cyou/blob/master/package.json) 以取得完整列表。
+……還有更多——檢視 [`package.json`](https://github.com/rnmeow/nekohuan.cyou/blob/master/package.json) 以取得完整列表。
 
 ## 開發工具
 
@@ -98,4 +99,4 @@ node .output/server/index.mjs
 
 ## 授權條款 / License
 
-[MIT License](https://github.com/kuohuanhuan/nekohuan.cyou/blob/master/LICENSE).
+[MIT License](https://github.com/rnmeow/nekohuan.cyou/blob/master/LICENSE).
