@@ -25,7 +25,7 @@
           </li>
         </ul>
         <NuxtLink
-          :to="RSS_FEED_URL"
+          to="https://nekohuan.cyou/atom.xml"
           class="flex h-9 w-9 items-center justify-center rounded-md"
           target="_blank" aria-label="RSS Feed"
         >
@@ -59,7 +59,7 @@
           </ul>
         </div>
         <NuxtLink
-          :to="RSS_FEED_URL"
+          to="https://nekohuan.cyou/atom.xml"
           class="flex h-9 w-9 items-center justify-center rounded-md"
           target="_blank" aria-label="RSS Feed"
         >
@@ -71,7 +71,7 @@
 </template>
 
 <script lang="ts" setup>
-import { HEADER_LINKS, RSS_FEED_URL } from '@/config/links'
+import { HEADER_LINKS } from '@/config/links'
 </script>
 
 <script lang="ts">

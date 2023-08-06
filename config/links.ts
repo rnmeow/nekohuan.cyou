@@ -43,8 +43,3 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
     href: 'https://stackoverflow.com/users/19172539'
   }
 ]
-
-export const REPO_OWNER = 'kuohuanhuan'
-export const REPO_NAME = 'blog'
-
-export const RSS_FEED_URL = 'https://nekohuan.cyou/atom.xml'

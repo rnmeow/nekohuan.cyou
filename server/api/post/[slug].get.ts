@@ -1,11 +1,10 @@
 import metadataParser from 'markdown-yaml-metadata-parser'
 import dayjs from 'dayjs'
-import { REPO_OWNER, REPO_NAME } from '@/config/links'
 import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async (event) => {
   const post = await fetch(
-    `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/posts/${event.context.params!.slug}.md`
+    `https://rawcdn.githack.com/rnmeow/blog/${COMMIT_HASH}/posts/${event.context.params!.slug}.md`
   ).then(res => res.text())
   const data: {
     metadata: {

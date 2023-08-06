@@ -1,6 +1,5 @@
 import dayjs from 'dayjs'
 import { decode } from 'js-base64'
-import { REPO_NAME, REPO_OWNER } from '@/config/links'
 import { COMMIT_HASH } from '@/config/source'
 
 export default defineEventHandler(async () => {
@@ -14,7 +13,7 @@ export default defineEventHandler(async () => {
   }[] = []
   for (
     const i of await fetch(
-      `https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/list.json`
+      `https://rawcdn.githack.com/rnmeow/blog/${COMMIT_HASH}/list.json`
     ).then(res => res.json())
   ) {
     posts.push({

@@ -41,10 +41,9 @@
 
 <script lang="ts" setup>
 import { COMMIT_HASH } from '@/config/source'
-import { REPO_NAME, REPO_OWNER } from '@/config/links'
 
 const { data } = useAsyncData(
-  () => $fetch(`https://rawcdn.githack.com/${REPO_OWNER}/${REPO_NAME}/${COMMIT_HASH}/links.json`)
+  () => $fetch(`https://rawcdn.githack.com/rnmeow/blog/${COMMIT_HASH}/links.json`)
 ) as unknown as {
   data: {
     name: string,
