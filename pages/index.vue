@@ -12,9 +12,11 @@
             format="avif" sizes="sm:80px md:112px" alt="Avatar"
           />
           <h1 class="text-3xl font-bold md:text-4xl">郭桓桓 (@kuohuanhuan)</h1>
-          <h2 class="font-semibold font-courier">
+          <h2 class="font-medium font-mono">
             <VueWriter
-              :array="status" :erase-speed="75" :type-speed="100"
+              :array="[
+                `${((new Date().getTime() - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)} y/o • Student • Front-end Developer`
+              ]" :erase-speed="75" :type-speed="100"
               class="after:content-['▊'] after:font-mono after:animate-ping"
             />
           </h2>
@@ -37,7 +39,7 @@
           <FAIcon category="fab" :icon="i.icon" size="lg"/>
         </NuxtLink>
         <NuxtLink
-          :to="`mailto:${MAIL_ADDRESS}`" target="_blank"
+          :to="`mailto:${email}`" target="_blank"
           class="transition duration-200 ease-in-out hover:text-neutral-800 hover:scale-125 dark:hover:text-neutral-100"
           aria-label="Send Email"
         >
@@ -49,8 +51,11 @@
 </template>
 
 <script lang="ts" setup>
+// declare function atob (params: string): string
+
+const birthday = atob('MjAwOC0xMC0xOQ==')
+const email = atob('dG91Y2hAcm5tZW93LmNvbQ==')
+
 import VueWriter from 'vue-writer'
-import { status } from '@/utils/status'
 import { SOCIAL_LINKS } from '@/config/links'
-import { MAIL_ADDRESS } from '@/config/personal-data'
 </script>

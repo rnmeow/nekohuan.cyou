@@ -11,10 +11,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'mono': ['DM Mono', 'Jetbrains Mono', 'Noto Sans TC', 'monospace'],
-      'sans': ['Open Sans', 'Helvetica', 'Noto Sans TC', 'sans-serif'],
-      // Custom
-      'courier': ['Courier Prime', 'Courier New', 'Courier', 'monospace']
+      'mono': ['Jetbrains Mono', 'Noto Sans TC', 'monospace'],
+      'sans': ['Open Sans', 'Helvetica', 'Noto Sans TC', 'sans-serif']
     }
   },
   plugins: [

@@ -48,9 +48,7 @@ export default {
     preconnect: true,
     preload: true,
     families: {
-      'DM+Mono': [400, 500],
-      'Open+Sans': [400, 600, 700],
-      'Courier+Prime': true
+      'Open+Sans': [400, 600, 700]
     },
     download: false
   },
