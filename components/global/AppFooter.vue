@@ -9,7 +9,7 @@
           <NuxtLink to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
             <NuxtImg
               src="external/https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
-              class="hover:rotate-6" format="webp" fit="cover" alt="CC BY-NC-SA 4.0"
+              class="hover:rotate-6" format="webp" alt="CC BY-NC-SA 4.0"
             />
           </NuxtLink>
         </p>
@@ -24,7 +24,7 @@
             <NuxtImg
               class="inline hover:rotate-6"
               src="external/https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              fit="cover" type="image/svg" alt="Cloudflare badge"
+              type="image/svg" alt="Cloudflare badge"
             />
           </NuxtLink>
           和
@@ -32,7 +32,7 @@
             <NuxtImg
               class="inline hover:rotate-6"
               src="external/https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"
-              fit="cover" type="image/svg" alt="Vercel badge"
+              type="image/svg" alt="Vercel badge"
             />
           </NuxtLink>
           驅動
@@ -46,11 +46,12 @@
 <script lang="ts">
 export default {
   methods: {
-    outputYear(origYear: number): string | undefined {
+    outputYear(startYear: number): string {
       const thisYear: number = new Date().getFullYear()
-      if (thisYear !== origYear) return `${origYear}-${thisYear}`
-      else if (thisYear === origYear) return origYear.toString()
-      return undefined
+      if (startYear > thisYear) {
+        throw new Error('FATAL: The starting year cannot be later than this year!')
+      }
+      else return thisYear > startYear ? `${startYear}-${thisYear}` : startYear.toString()
     }
   }
 }
