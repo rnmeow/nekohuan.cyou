@@ -25,5 +25,5 @@ export default defineEventHandler(async () => {
       tags: i.tags
     })
   }
-  return posts.sort((a, b) => !dayjs(a.datetime).isAfter(dayjs(b.datetime)) ? 1 : -1)
+  return posts.sort((a, b) => dayjs(a.datetime).isBefore(dayjs(b.datetime)) ? 1 : -1)
 })
