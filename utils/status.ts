@@ -5,7 +5,7 @@ function calc(birthday: string): string {
   return ((newDate - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)
 }
 const arr: string[] = [
-  `${calc(BIRTHDAY)} y/o • Student • Jr. Front-end Coder`
+  `${calc(BIRTHDAY)} y/o • Student • Front-end Developer`
 ]
 STATUS_LIST.forEach(i => {
   arr.push(i)
