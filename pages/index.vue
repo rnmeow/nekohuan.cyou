@@ -15,9 +15,9 @@
           <h2 class="font-medium font-mono">
             <VueWriter
               :array="[
-                `${((new Date().getTime() - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)} y/o • Student • Front-end Developer`
+                `${age} y/o • Student • Front-end Developer`
               ]" :erase-speed="75" :type-speed="100"
-              class="after:content-['▊'] after:font-mono after:animate-ping"
+              class="after:content-['_'] after:font-mono after:animate-ping"
             />
           </h2>
           <p class="text-lg">
@@ -51,11 +51,13 @@
 </template>
 
 <script lang="ts" setup>
+import VueWriter from 'vue-writer'
+import { SOCIAL_LINKS } from '@/config/links'
+
 // declare function atob (params: string): string
 
 const birthday = atob('MjAwOC0xMC0xOQ==')
 const email = atob('dG91Y2hAcm5tZW93LmNvbQ==')
 
-import VueWriter from 'vue-writer'
-import { SOCIAL_LINKS } from '@/config/links'
+const age = ((new Date().getTime() - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)
 </script>
