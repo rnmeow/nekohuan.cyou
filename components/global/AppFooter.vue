@@ -21,21 +21,13 @@
             class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
             aria-label="Link to Cloudflare"
           >
-            <NuxtImg
-              class="inline hover:rotate-6"
-              src="external/https://img.shields.io/badge/Cloudflare-f6821f?style=flat-square&logo=Cloudflare&logoColor=white"
-              type="image/svg" alt="Cloudflare badge"
-            />
+            Cloudflare
           </NuxtLink>
           和
-          <NuxtLink to="https://vercel.com" target="_blank" aria-label="Link to Vercel">
-            <NuxtImg
-              class="inline hover:rotate-6"
-              src="external/https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"
-              type="image/svg" alt="Vercel badge"
-            />
+          <NuxtLink to="https://zeabur.com" target="_blank" aria-label="Link to Zeabur">
+            Zeabur
           </NuxtLink>
-          驅動
+          強力驅動
         </p>
       </div>
     </section>
