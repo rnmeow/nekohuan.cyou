@@ -19,14 +19,15 @@
             to="https://cloudflare.com"
             target="_blank"
             class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
-            aria-label="Link to Cloudflare"
-          >
-            Cloudflare
-          </NuxtLink>
+            aria-label="Link to Cloudflare">
+            Cloudflare</NuxtLink>
           和
-          <NuxtLink to="https://zeabur.com" target="_blank" aria-label="Link to Zeabur">
-            Zeabur
-          </NuxtLink>
+          <NuxtLink
+            to="https://zeabur.com"
+            target="_blank"
+            class="text-emerald-700 decoration-2 hover:underline dark:text-emerald-400"
+            aria-label="Link to Zeabur">
+            Zeabur</NuxtLink>
           強力驅動
         </p>
       </div>
