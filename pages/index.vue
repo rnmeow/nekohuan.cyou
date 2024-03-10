@@ -17,7 +17,7 @@
               :array="[
                 `${age} y/o • Student • Front-end Developer`
               ]" :erase-speed="75" :type-speed="100"
-              class="after:content-['&UnderBar;'] after:font-mono after:animate-ping"
+              class="after:content-['\_'] after:font-mono after:animate-ping"
             />
           </h2>
           <p class="text-lg">
