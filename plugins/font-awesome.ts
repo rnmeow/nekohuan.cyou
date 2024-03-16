@@ -4,15 +4,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 import { 
-  faGolang, faVuejs, faGitAlt, faNodeJs, faGithub, faBitbucket, faWhatsapp, faTelegram, faStackOverflow
+  faGolang, faReact, faGitAlt, faNodeJs, faGithub, faBitbucket, faWhatsapp, faTelegram, faStackOverflow
 } from '@fortawesome/free-brands-svg-icons'
-// eslint-disable-next-line import/named -- Temporary solution
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 config.autoAddCss = false
 library.add(
   faTag, faAngleLeft, faAngleRight, faAngleUp, faHeart, faRss, faBars, faEnvelope, faEye,
-  faCopyright, faClockRotateLeft, faGolang, faVuejs, faGitAlt, faNodeJs,
+  faCopyright, faClockRotateLeft, faGolang, faReact, faGitAlt, faNodeJs,
   faGithub, faBitbucket, faWhatsapp, faTelegram, faStackOverflow
 )
 

@@ -23,7 +23,7 @@
           <p class="text-lg">
             一個來自臺灣 🇹🇼 的前端 Coder 👨🏻‍💻、Podcast 愛好者 📻、部落客 ✍️ 和學生 👨‍🎓。
             <br/>
-            目前正在學習 <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline">Golang</NuxtLink> <FAIcon category="fab" icon="golang" tailwind="text-sky-600 dark:text-sky-400"/>、<NuxtLink to="https://v3.vuejs.org" target="_blank" class="decoration-2 hover:underline">Vue 3</NuxtLink> <FAIcon category="fab" icon="vuejs" tailwind="text-emerald-600 dark:text-emerald-400"/>、<NuxtLink to="https://git-scm.com" target="_blank" class="decoration-2 hover:underline">Git</NuxtLink> <FAIcon category="fab" icon="git-alt" tailwind="text-orange-600 dark:text-orange-400"/> 和 <NuxtLink to="https://nodejs.org" target="_blank" class="decoration-2 hover:underline">Node.js</NuxtLink> <FAIcon category="fab" icon="node-js" tailwind="text-lime-600 dark:text-lime-400"/> ……<!-- WHAT A MESS?-->
+            目前正在學習 <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline">Go</NuxtLink> <FAIcon category="fab" icon="golang" tailwind="text-sky-600 dark:text-sky-400"/>、<NuxtLink to="https://react.dev" target="_blank" class="decoration-2 hover:underline">React</NuxtLink> <FAIcon category="fab" icon="react" tailwind="text-blue-600 dark:text-blue-400"/>、<NuxtLink to="https://git-scm.com" target="_blank" class="decoration-2 hover:underline">Git</NuxtLink> <FAIcon category="fab" icon="git-alt" tailwind="text-orange-600 dark:text-orange-400"/> 和 <NuxtLink to="https://nodejs.org" target="_blank" class="decoration-2 hover:underline">Node.js</NuxtLink> <FAIcon category="fab" icon="node-js" tailwind="text-lime-600 dark:text-lime-400"/> ……<!-- WHAT A MESS?-->
           </p>
         </div>
       </div>
