@@ -10,7 +10,7 @@
     </p>
     <hr class="my-8 dark:border-neutral-500"/>
     <giscus
-      repo="kuohuanhuan/blog"
+      repo="rnmeow/blog"
       repo-id="R_kgDOI3I4HA"
       category="Comments"
       category-id="DIC_kwDOI3I4HM4CT7PF"
