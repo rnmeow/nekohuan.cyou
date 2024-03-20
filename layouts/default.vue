@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#fcfcfc] font-mono dark:bg-[#1b1c1e]">
+  <div class="bg-[#fcfcfc] font-sans dark:bg-[#1b1c1e]">
     <AppHeader/>
     <slot/>
     <AppFooter/>

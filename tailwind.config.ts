@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'mono': ['Jetbrains Mono', 'Noto Sans TC', 'monospace'],
-      'sans': ['Open Sans', 'Helvetica', 'Noto Sans TC', 'sans-serif']
+      'sans': ['Open Sans', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'Sarasa Gothic TC', 'Noto Sans TC', 'sans-serif', 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji']
     }
   },
   plugins: [
