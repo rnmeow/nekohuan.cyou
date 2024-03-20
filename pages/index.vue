@@ -54,8 +54,6 @@
 import VueWriter from 'vue-writer'
 import { SOCIAL_LINKS } from '@/config/links'
 
-// declare function atob (params: string): string
-
 const birthday = atob('MjAwOC0xMC0xOQ==')
 const email = atob('dG91Y2hAcm5tZW93LmNvbQ==')
 

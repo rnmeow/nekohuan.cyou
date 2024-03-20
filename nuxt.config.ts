@@ -38,7 +38,7 @@ export default {
   },
   css: [
     'normalize.css/normalize.css',
-    '@fortawesome/fontawesome/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   image: {
     provider: 'imagekit',

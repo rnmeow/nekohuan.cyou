@@ -7,15 +7,7 @@ export default defineEventHandler(async (event) => {
     `https://rawcdn.githack.com/rnmeow/blog/${COMMIT_HASH}/posts/${event.context.params!.slug}.md`
   ).then(res => res.text())
 
-  const res: {
-    data: {
-      title: string,
-      datetime: string,
-      description: string,
-      tags: string
-    },
-    content: string
-  } = matter(post, {})
+  const res = matter(post, {})
 
   return {
     slug: event.context.params!.slug,
