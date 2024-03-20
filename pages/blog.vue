@@ -9,14 +9,3 @@
     <PostCard/>
   </section>
 </template>
-
-<script lang="ts">
-export default {
-  computed: {
-    isOSX () {
-      if (process.client) return navigator.userAgent.includes('Mac OS X') || navigator.userAgent.includes('macOS')
-      else return false
-    }
-  }
-}
-</script>
