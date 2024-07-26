@@ -1,14 +1,14 @@
 <template>
   <section class="relative mx-auto max-w-5xl min-h-screen px-8 py-24 dark:text-neutral-300">
     <Head>
-      <Title>友人帳 | kuohuanhuan</Title>
+      <Title>友人帳 | rnmeow</Title>
       <Meta name="description" content="在網路世界走跳，結交的一群朋友 😀（歡迎掛連結 😉）"/>
     </Head>
     <h1 class="font-bold text-neutral-800 dark:text-neutral-200">友情連結</h1>
     <p class="leading-8">
       在網路世界走跳，結交的一群朋友 😀
       <br/>
-      想掛連結？請瀏覽 <NuxtLink to="https://github.com/kuohuanhuan/blog" target="_blank" class="underline decoration-2 decoration-dashed hover:decoration-solid">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
+      想掛連結？請瀏覽 <NuxtLink to="https://github.com/rnmeow/blog" target="_blank" class="underline decoration-2 decoration-dashed hover:decoration-solid">GitHub 儲存庫</NuxtLink>，並遵照 <code>`README.md`</code> 檔案的指示進行 😉
     </p>
     <hr class="my-8 dark:border-neutral-500"/>
     <div class="grid grid-cols-1 md:grid-cols-2">

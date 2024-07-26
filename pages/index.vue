@@ -1,27 +1,27 @@
 <template>
   <section class="flex items-center max-w-5xl h-screen mx-auto dark:text-neutral-300">
     <Head>
-      <Title>首頁 | kuohuanhuan</Title>
+      <Title>首頁 | rnmeow</Title>
     </Head>
     <div class="max-w-5xl mx-8 space-y-6">
       <div class="flex flex-col-reverse md:flex-row md:justify-between">
         <div class="space-y-4">
           <NuxtImg
-            src="/avatar.avif"
+            src="/avatar_neo.png"
             class="h-20 w-20 mb-8 rounded-full md:h-28 md:w-28 md:transform-none"
             format="avif" sizes="sm:80px md:112px" alt="Avatar"
           />
-          <h1 class="text-3xl font-bold md:text-4xl">郭桓桓 (@kuohuanhuan)</h1>
+          <h1 class="text-3xl font-bold md:text-4xl">雨喵 (Connor Kuo)</h1>
           <h2 class="font-medium font-mono">
             <VueWriter
               :array="[
-                `${age} y/o • Student • Front-end Developer`
+                `${age} y/o • TNFSH • Developer`
               ]" :erase-speed="75" :type-speed="100"
               class="after:content-['\_'] after:font-mono after:animate-ping"
             />
           </h2>
           <p class="text-lg">
-            一個來自臺灣 🇹🇼 的前端 Coder 👨🏻‍💻、Podcast 愛好者 📻、部落客 ✍️ 和學生 👨‍🎓。
+            一個來自台灣 🇹🇼 的網頁設計師 👨🏻‍💻、Podcast 愛好者 📻、部落客 ✍️ 和學生 👨‍🎓。
             <br/>
             目前正在學習 <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline">Go</NuxtLink> <FAIcon category="fab" icon="golang" tailwind="text-sky-600 dark:text-sky-400"/>、<NuxtLink to="https://react.dev" target="_blank" class="decoration-2 hover:underline">React</NuxtLink> <FAIcon category="fab" icon="react" tailwind="text-blue-600 dark:text-blue-400"/>、<NuxtLink to="https://git-scm.com" target="_blank" class="decoration-2 hover:underline">Git</NuxtLink> <FAIcon category="fab" icon="git-alt" tailwind="text-orange-600 dark:text-orange-400"/> 和 <NuxtLink to="https://nodejs.org" target="_blank" class="decoration-2 hover:underline">Node.js</NuxtLink> <FAIcon category="fab" icon="node-js" tailwind="text-lime-600 dark:text-lime-400"/> ……<!-- WHAT A MESS?-->
           </p>

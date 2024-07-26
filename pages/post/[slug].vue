@@ -10,7 +10,7 @@
       <!-- <Meta name="og:image" :content="<url>"/> -->
       <Meta name="twitter:card" content="summary_large_image"/>
       <Meta name="twitter:site" content="https://nekohuan.cyou"/>
-      <Meta name="twitter:creator" content="@kuohuanhuan"/>
+      <Meta name="twitter:creator" content="@rnmeow"/>
       <Meta name="twitter:title" :content="data.title"/>
       <Meta name="twitter:description" :content="data.description"/>
       <!-- <Meta name="twitter:image" :content="<url>"/> -->

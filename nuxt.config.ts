@@ -15,12 +15,12 @@ export default {
       viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       meta: [
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=EmulateIE7' }, // lmfao
-        { name: 'description', content: 'Hi 👋, KuoHuanHuan here! I\'m a coder student from Taiwan.' },
+        { name: 'description', content: 'Hi 👋, rnmeow here! I\'m a coder student from Taiwan.' },
         { name: 'google', content: 'notranslate' }
       ],
       link: [
         { rel: 'preconnect', href: 'https://ik.imagekit.io' },
-        { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.svg' },
         { rel: 'shortcut icon', type: 'image/png', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-touch-icon.png' }
       ],
