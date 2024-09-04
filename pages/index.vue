@@ -16,12 +16,12 @@
             <VueWriter
               :array="[
                 `${age} y/o • TNFSH • Developer`
-              ]" :erase-speed="75" :type-speed="100"
+              ]" :iterations="1" :type-speed="100"
               class="after:content-['\_'] after:font-mono after:animate-ping"
             />
           </h2>
           <p class="text-lg">
-            一個來自台灣 🇹🇼 的網頁設計師 👨🏻‍💻、Podcast 愛好者 📻、部落客 ✍️ 和學生 👨‍🎓。
+            一個來自台灣 🇹🇼 的網頁設計師 👨🏻‍💻、電台聽眾 📻、部落客 ✍️ 和學生 👨‍🎓。
             <br/>
             目前正在學習 <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline">Go</NuxtLink> <FAIcon category="fab" icon="golang" tailwind="text-sky-600 dark:text-sky-400"/>、<NuxtLink to="https://aws.amazon.com/tw/what-is/sql/" target="_blank" class="decoration-2 hover:underline">SQL</NuxtLink> <FAIcon category="fas" icon="database" tailwind="text-blue-600 dark:text-blue-400"/>、<NuxtLink to="https://git-scm.com" target="_blank" class="decoration-2 hover:underline">Git</NuxtLink> <FAIcon category="fab" icon="git-alt" tailwind="text-orange-600 dark:text-orange-400"/> 和 <NuxtLink to="https://nodejs.org" target="_blank" class="decoration-2 hover:underline">Node.js</NuxtLink> <FAIcon category="fab" icon="node-js" tailwind="text-lime-600 dark:text-lime-400"/> ……<!-- WHAT A MESS?-->
           </p>
