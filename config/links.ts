@@ -24,22 +24,22 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   },
   {
     key: 1,
-    icon: 'bitbucket',
-    href: 'https://bitbucket.org/rnmeow'
+    icon: 'discord',
+    href: 'https://discordapp.com/users/636867291782578188'
   },
   {
     key: 2,
-    icon: 'whatsapp',
-    href: 'https://wa.me/qr/U6MQGCSJZICZH1'
+    icon: 'instagram',
+    href: 'https://www.instagram.com/khh._.owo'
   },
   {
     key: 3,
-    icon: 'telegram',
-    href: 'https://telegram.me/rnmeow'
+    icon: 'threads',
+    href: 'https://www.threads.net/khh._.owo'
   },
   {
     key: 4,
-    icon: 'stack-overflow',
-    href: 'https://stackoverflow.com/users/19172539'
+    icon: 'telegram',
+    href: 'https://telegram.me/rnmeow'
   }
 ]

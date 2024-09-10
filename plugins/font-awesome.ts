@@ -7,21 +7,20 @@ import {
   faHeart,
   faRss,
   faBars,
-  faDatabase,
+  faMicrochip,
   faEnvelope,
   faEye,
   faClockRotateLeft
 } from '@fortawesome/free-solid-svg-icons'
 import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 import {
+  faJsSquare,
   faGolang,
-  faGitAlt,
-  faNodeJs,
   faGithub,
-  faBitbucket,
-  faWhatsapp,
+  faDiscord,
+  faInstagram,
   faTelegram,
-  faStackOverflow
+  faThreads
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -34,19 +33,18 @@ library.add(
   faHeart,
   faRss,
   faBars,
-  faDatabase,
+  faMicrochip,
   faEnvelope,
   faEye,
   faCopyright,
   faClockRotateLeft,
+  faJsSquare,
   faGolang,
-  faGitAlt,
-  faNodeJs,
   faGithub,
-  faBitbucket,
-  faWhatsapp,
+  faDiscord,
+  faInstagram,
   faTelegram,
-  faStackOverflow
+  faThreads
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
