@@ -38,7 +38,8 @@ export default {
   },
   css: [
     'normalize.css/normalize.css',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    './assets/icomoon/style.css'
   ],
   image: {
     provider: 'imagekit',
