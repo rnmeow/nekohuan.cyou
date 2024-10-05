@@ -38,7 +38,7 @@
 ## 銘謝
 
 - [GitHub](https://github.com) 提供 Git 儲存庫和 GitHub Actions CI 服務。
-- [Railway](https://railway.app) 提供 Web Service 託管服務。
+- [Zeabur](https://zeabur.com) 提供託管服務。
 
 ## 開發
 
