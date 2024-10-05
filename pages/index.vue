@@ -46,7 +46,7 @@
           <FAIcon category="fab" :icon="i.icon" size="lg" />
         </NuxtLink>
         <NuxtLink
-          :to="`mailto:${email}`"
+          :to="`mailto:${emailAddr}`"
           target="_blank"
           class="transition duration-200 ease-in-out hover:scale-125 hover:text-neutral-800 dark:hover:text-neutral-100"
           aria-label="Send Email"
@@ -63,7 +63,12 @@ import VueWriter from 'vue-writer'
 import { SOCIAL_LINKS } from '@/config/links'
 
 const birthday = atob('MjAwOC0xMC0xOQ==')
-const email = atob('dG91Y2hAcm5tZW93LmNvbQ==')
+
+let arr = [
+  0x64, 0x47, 0x39, 0x31, 0x59, 0x32, 0x68, 0x41, 0x63, 0x6d, 0x35, 0x74, 0x5a,
+  0x57, 0x39, 0x33, 0x4c, 0x6d, 0x4e, 0x76, 0x62, 0x51, 0x3d, 0x3d,
+]
+const emailAddr = atob(String.fromCharCode.apply(null, arr))
 
 const age = ((new Date().getTime() - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)
 </script>
