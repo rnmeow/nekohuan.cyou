@@ -29,7 +29,7 @@
             專精
             <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline"
               >Go</NuxtLink
-            >
+            >{{ ' ' }}
             <FAIcon
               category="fab"
               icon="golang"
@@ -39,7 +39,7 @@
               target="_blank"
               class="decoration-2 hover:underline"
               >JavaScript</NuxtLink
-            >
+            >{{ ' ' }}
             <FAIcon
               category="fab"
               icon="js-square"
