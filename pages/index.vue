@@ -23,14 +23,30 @@
             />
           </h2>
           <p class="text-lg">
-            一個來自台灣 <span class="icon-taiwan"></span> 台南的 Web（主要是前端）開發者 👨🏻‍💻、部落客 ✍️、高中生 👨‍🎓。
+            一個來自台灣 <span class="icon-taiwan"></span> 台南的 Web（主要是前端）開發者 👨🏻‍💻、部落客
+            ✍️、高中生 👨‍🎓。
             <br />
             專精
             <NuxtLink to="https://go.dev" target="_blank" class="decoration-2 hover:underline"
               >Go</NuxtLink
-            > <FAIcon category="fab" icon="golang" tailwind="text-sky-600 dark:text-sky-400" />、<NuxtLink to="https://ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" class="decoration-2 hover:underline"
+            >
+            <FAIcon
+              category="fab"
+              icon="golang"
+              tailwind="text-sky-600 dark:text-sky-400"
+            />、<NuxtLink
+              to="https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+              target="_blank"
+              class="decoration-2 hover:underline"
               >JavaScript</NuxtLink
-            > <FAIcon category="fab" icon="js-square" tailwind="text-yellow-600 dark:text-yellow-400" />，正摸索邊緣運算 <FAIcon category="fas" icon="microchip" tailwind="text-stone-600 dark:text-stone-400" /> 等技術。
+            >
+            <FAIcon
+              category="fab"
+              icon="js-square"
+              tailwind="text-yellow-600 dark:text-yellow-400"
+            />，正摸索邊緣運算
+            <FAIcon category="fas" icon="microchip" tailwind="text-stone-600 dark:text-stone-400" />
+            等技術。
           </p>
         </div>
       </div>
@@ -62,13 +78,14 @@
 import VueWriter from 'vue-writer'
 import { SOCIAL_LINKS } from '@/config/links'
 
-const birthday = atob('MjAwOC0xMC0xOQ==')
-
 let arr = [
-  0x64, 0x47, 0x39, 0x31, 0x59, 0x32, 0x68, 0x41, 0x63, 0x6d, 0x35, 0x74, 0x5a,
-  0x57, 0x39, 0x33, 0x4c, 0x6d, 0x4e, 0x76, 0x62, 0x51, 0x3d, 0x3d,
+  0x64, 0x47, 0x39, 0x31, 0x59, 0x32, 0x68, 0x41, 0x63, 0x6d, 0x35, 0x74, 0x5a, 0x57, 0x39, 0x33,
+  0x4c, 0x6d, 0x4e, 0x76, 0x62, 0x51, 0x3d, 0x3d
 ]
 const emailAddr = atob(String.fromCharCode.apply(null, arr))
 
-const age = ((new Date().getTime() - Date.parse(birthday)) / (24 * 60 * 60 * 1000 * 365)).toFixed(2)
+const age = (
+  (new Date().getTime() - Date.parse(atob('MjAwOC0xMC0xOQ=='))) /
+  (24 * 60 * 60 * 1000 * 365)
+).toFixed(2)
 </script>
