@@ -99,10 +99,8 @@ if (process.client) {
 
   const arr = new Uint8Array(mem.buffer, 0, len() satisfies number)
 
-  let cnt = 0x0f
-
   for (let i = 0; i < arr.length; i++) {
-    arr[i] -= i < 0x0a ? ++cnt : cnt++ - (-244 + 0xed)
+    arr[i] -= i <= 0x09 ? 0x10 + i : 0x16 + i
   }
 
   localStorage.setItem('email', new TextDecoder().decode(arr))
