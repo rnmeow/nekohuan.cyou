@@ -78,12 +78,34 @@
 import VueWriter from 'vue-writer'
 import { SOCIAL_LINKS } from '@/config/links'
 
-const arr = [
-  0x64, 0x47, 0x39, 0x31, 0x59, 0x32, 0x68, 0x41, 0x63, 0x6d, 0x35, 0x74, 0x5a, 0x57, 0x39, 0x33,
-  0x4c, 0x6d, 0x4e, 0x76, 0x62, 0x51, 0x3d, 0x3d
-]
 if (process.client) {
-  localStorage.setItem('email', atob(String.fromCharCode.apply(null, arr)))
+  const { instance } = await WebAssembly.instantiate(
+    new Uint8Array([
+      0, 97, 115, 109, 1, 0, 0, 0, 1, 8, 2, 96, 0, 0, 96, 0, 1, 127, 3, 3, 2, 0, 1, 5, 3, 1, 0, 1,
+      6, 6, 1, 127, 0, 65, 16, 11, 7, 47, 3, 17, 109, 97, 116, 100, 117, 99, 97, 105, 95, 116, 108,
+      107, 99, 103, 117, 121, 107, 0, 0, 14, 103, 101, 116, 95, 97, 114, 114, 95, 108, 101, 110,
+      103, 116, 104, 0, 1, 6, 109, 101, 109, 111, 114, 121, 2, 0, 10, 75, 2, 68, 1, 3, 127, 65, 0,
+      33, 0, 35, 0, 65, 1, 107, 33, 1, 3, 64, 2, 64, 32, 0, 32, 1, 79, 13, 0, 32, 0, 45, 0, 0, 33,
+      2, 32, 0, 32, 1, 45, 0, 0, 58, 0, 0, 32, 1, 32, 2, 58, 0, 0, 32, 0, 65, 1, 106, 33, 0, 32, 1,
+      65, 1, 107, 33, 1, 12, 1, 11, 11, 11, 4, 0, 35, 0, 11, 11, 22, 1, 0, 65, 0, 11, 16, 146, 147,
+      134, 80, 152, 143, 126, 133, 133, 136, 85, 124, 118, 135, 128, 132
+    ])
+  )
+
+  ;(instance.exports.matducai_tlkcguyk as CallableFunction)()
+
+  const mem = instance.exports.memory as WebAssembly.Memory
+  const len = instance.exports.get_arr_length as CallableFunction
+
+  const arr = new Uint8Array(mem.buffer, 0, len() satisfies number)
+
+  let cnt = 0x0f
+
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] -= i < 0x0a ? ++cnt : cnt++ - (-244 + 0xed)
+  }
+
+  localStorage.setItem('email', new TextDecoder().decode(arr))
 }
 
 const emailAddr = ref('')
