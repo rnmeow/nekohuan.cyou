@@ -30,12 +30,12 @@ export const SOCIAL_LINKS: { key: number, icon: string, href: string }[] = [
   {
     key: 2,
     icon: 'instagram',
-    href: 'https://www.instagram.com/khh._.owo'
+    href: 'https://www.instagram.com/rnmeow.wasm'
   },
   {
     key: 3,
     icon: 'threads',
-    href: 'https://www.threads.net/khh._.owo'
+    href: 'https://www.threads.net/rnmeow.wasm'
   },
   {
     key: 4,
