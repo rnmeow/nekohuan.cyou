@@ -5593,6 +5593,11 @@ longest@^2.0.1:
   resolved "https://registry.yarnpkg.com/longest/-/longest-2.0.1.tgz#781e183296aa94f6d4d916dc335d0d17aefa23f8"
   integrity sha512-Ajzxb8CM6WAnFjgiloPsI3bF+WCxcvhdIG3KNA2KN962+tdBsHcuQ4k4qX/EcS/2CRkcc0iAkR956Nib6aXU/Q==
 
+longevity-js@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/longevity-js/-/longevity-js-0.0.2.tgz#faa6facce92ba04f17192defd49341ad203e63c1"
+  integrity sha512-eh2DVJbOOp3ZvGAsdePC4JTZyrAKuWo1DIpBnfvY7rtMxU0yxYd2rZouU6y5lUHkQHIG9cMNphsjkAeeUsFixg==
+
 lru-cache@^10.0.1, lru-cache@^10.2.0, "lru-cache@^9.1.1 || ^10.0.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.0.tgz#0bd445ca57363465900f4d1f9bd8db343a4d95c3"

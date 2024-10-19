@@ -76,6 +76,7 @@
 
 <script lang="ts" setup>
 import VueWriter from 'vue-writer'
+import { calcAge } from 'longevity-js'
 import { SOCIAL_LINKS } from '@/config/links'
 
 if (process.client) {
@@ -113,8 +114,5 @@ onMounted(() => {
   emailAddr.value = localStorage.getItem('email')
 })
 
-const age = (
-  (new Date().getTime() - Date.parse(atob('MjAwOC0xMC0xOQ=='))) /
-  (24 * 60 * 60 * 1000 * 365)
-).toFixed(2)
+const age = calcAge(new Date('2008-10-19T21:30:00.000+08:00')).toFixed(2)
 </script>
