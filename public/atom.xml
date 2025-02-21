@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nekohuan.cyou</id>
     <title>khh.log</title>
-    <updated>2025-02-21T11:43:16.368Z</updated>
+    <updated>2025-02-21T11:53:45.891Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Connor Kuo</name>
@@ -79,13 +79,12 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[記 113 學年度第一學期資訊彈性評量]]></title>
+        <title type="html"><![CDATA[記 113 學年度第二學期資訊彈性評量]]></title>
         <id>https://nekohuan.cyou/post/informatics-exemption-contest-1132</id>
         <link href="https://nekohuan.cyou/post/informatics-exemption-contest-1132"/>
         <updated>2025-02-21T18:00:00.000Z</updated>
         <summary type="html"><![CDATA[第一次認真打競程居然是在免修考。]]></summary>
-        <content type="html"><![CDATA[<p>第一次認真打競程居然是在免修考。</p><h2>遞表</h2><p>說實話，我直到第二堂資訊課才知道彈性評量（俗稱免修考）這東西。</p><blockquote><p>「如果你以前學過程式語言，可以去考彈性評量。過了就不用來上課了。」
- ──張老師惠國</p></blockquote><p>想著課程內容大概也只是一些 *比較進階的 Hello World* 而已，沒有上的必要，當天出校門就跑去影印店印了份申請表。損失新台幣兩圓。</p><p>瞥了一眼申請表，似乎需要三個簽名：家長、班導師，和資訊科任老師 <strong>初審</strong>。這下可好，如何向資訊老師證明我確有能力<del>（其實沒有）</del>通過複試，而非沒事浪費行政資源的弱智？不出意料，經過一番琢磨…… 我依然湊不出哪怕一句像樣的標準答案。</p><p>「啊，反正，臨機應變我挺『在行』。」總之，某日資訊課間，這個弱智直接腦袋空空地去找資訊老師了——他（指資訊老師）一聲不吭，拿起原子筆就落下一個簽名。哈，心有靈犀。</p><p>這是我的「初審」。</p><h2>快樂 <del>AC</del> WA 時間</h2><p>標準：<strong>80</strong> / 100 分，相當於五題中 AC 四題的積分（400 / 500）。部份給分的題目亦採計得分。</p><p>聲明：眾所周知，我是個網管仔。我 <strong>從未</strong> 系統性地學過競賽程式設計或演算法。因此，下述程式碼全是非常醜的實現，請勿模仿。</p><h3>pA：[for] 電梯</h3><p><span style="color: green;">Accepted</span></p><p>考 for 迴圈。大意：</p><p>- 計算電梯整天的用電量——每上升一樓耗 3 度電，每下降一樓耗 2 度電。
+        <content type="html"><![CDATA[<p>第一次認真打競程居然是在免修考。</p><h2>遞表</h2><p>說實話，我直到第二堂資訊課才知道彈性評量（俗稱免修考）這東西。</p><blockquote><p>如果你以前學過程式語言，可以去考彈性評量。過了就不用來上課了。</p></blockquote><p>──張老師惠國</p><p>想著課程內容大概也只是一些 *比較進階的 Hello World* 而已，沒有上的必要，當天出校門就跑去影印店印了份申請表。損失新台幣兩圓。</p><p>瞥了一眼申請表，似乎需要三個簽名：家長、班導師，和資訊科任老師 <strong>初審</strong>。這下可好，如何向資訊老師證明我確有能力<del>（其實沒有）</del>通過複試，而非沒事浪費行政資源的弱智？不出意料，經過一番琢磨…… 我依然湊不出哪怕一句像樣的標準答案。</p><p>「啊，反正，臨機應變我挺『在行』。」總之，某日資訊課間，這個弱智直接腦袋空空地去找資訊老師了——他（指資訊老師）一聲不吭，拿起原子筆就落下一個簽名。哈，心有靈犀。</p><p>這是我的「初審」。</p><h2>快樂 <del>AC</del> WA 時間</h2><p>標準：<strong>80</strong> / 100 分，相當於五題中 AC 四題的積分（400 / 500）。部份給分的題目亦採計得分。</p><p>聲明：眾所周知，我是個網管仔。我 <strong>從未</strong> 系統性地學過競賽程式設計或演算法。因此，下述程式碼全是非常醜的實現，請勿模仿。</p><h3>pA：[for] 電梯</h3><p><span style="color: green;">Accepted</span></p><p>考 for 迴圈。大意：</p><p>- 計算電梯整天的用電量——每上升一樓耗 3 度電，每下降一樓耗 2 度電。
 - 第一行讀入當日電梯總移動次數 *n*。
 - 後續 *n* 個數字分別代表該次移動後，電梯所停靠的樓層。</p><p>實現：</p><pre class="language-cpp"><code>#include "iostream"<br><br>using namespace std;<br><br>int main(void) {<br>	int num;<br>    cin &gt;&gt; num;<br><br>    int lastFl = 1, totalKwh = 0;<br><br>	for (int i = 0; i &lt; num; i++) {<br>		int targFl;<br>        cin &gt;&gt; targFl;<br><br>		int diff = lastFl - targFl;<br>	<br>		if (diff &gt; 0) {<br>			totalKwh += 2 * diff;<br>		} else if (diff &lt; 0) {<br>			totalKwh -= 3 * diff; // diff is negative<br>		} else {<br>            continue;<br>        }<br><br>		lastFl = targFl;<br>	}<br><br>	cout &lt;&lt; totalKwh &lt;&lt; '\n';<br><br>	return 0;<br>}<br></code></pre><p>…… 題目不換新一下嗎？根本去年的 pC，只把「時間」改成了「用電度數」（詳見 <a href="https://hackmd.io/@blameazu/CODENOTE/%2F%40blameazu%2Fpasscontest">資訊社電神社長 Blameazu 的 HackMD</a>）。</p><h3>pB：[APCS-1 模擬] 遊戲選角</h3><p><span style="color: green;">Accepted</span></p><p>APCS 模擬，我看不出考點。大意：</p><p>- 第一行讀入 *n* 為角色總數。
 - 讀入每個角色的攻擊力和防禦力，記為 *a<sub>n</sub>* 和 *d<sub>n</sub>*。
