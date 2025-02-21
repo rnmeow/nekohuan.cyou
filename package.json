@@ -52,7 +52,7 @@
     "markdown-it-image-lazy-loading": "^1.2.0",
     "markdown-yaml-metadata-parser": "^3.0.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^3.6.5",
+    "nuxt": "^3.15.3",
     "typescript": "^5.1.6",
     "uslug": "^1.0.4",
     "vue": "^3.4.21",
