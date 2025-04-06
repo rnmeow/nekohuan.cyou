@@ -53,7 +53,7 @@
     "markdown-yaml-metadata-parser": "^3.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.6.5",
-    "typescript": "^5.1.6",
+    "typescript": "^5.6.3",
     "uslug": "^1.0.4",
     "vue": "^3.4.21",
     "vue-gtag-next": "^1.14.0",
