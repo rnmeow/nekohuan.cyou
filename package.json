@@ -42,7 +42,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
     "dayjs": "^1.11.9",
-    "h3": "^1.7.1",
+    "h3": "^1.15.5",
     "highlight.js": "^11.8.0",
     "js-base64": "^3.7.5",
     "longevity-js": "^0.0.2",
